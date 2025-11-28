@@ -1,0 +1,557 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+
+const pageTitle =
+  "Poulomi Florique – 3 BHK Bloomscapes® Homes on Thanisandra Main Road, North Bangalore";
+const pageDescription =
+  "Explore Poulomi Florique – premium 3 BHK Bloomscapes® residences on Thanisandra Main Road, North Bangalore. 9-acre IGBC-oriented community with 768 Vastu-compliant homes, 80%+ open spaces and 40+ lifestyle amenities.";
+
+const developerName = "Poulomi Estates";
+const locationLine = "Thanisandra Main Road, near Bhartiya City, North Bangalore";
+const configSummary = "Premium 3 BHK (with select 2.5 BHK) residences";
+const landArea = "Approx. 9 acres";
+const totalUnits = "Approx. 768 apartments";
+const openSpace = "80–85% open, landscaped spaces";
+const amenitiesCount = "40+ amenities including 52,900 sq.ft clubhouse";
+const brochureUrl = "/assets/poulomi-florique-brochure.pdf"; // upload this in /public/assets
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main class="pt-4 pb-12 lg:pb-16">
+    {/* Breadcrumb */}
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 mt-4 mb-6 text-xs text-slate-400">
+      <a href="/" class="hover:text-cyan-300">Home</a>
+      <span class="mx-1.5 text-slate-600">/</span>
+      <a href="/#properties" class="hover:text-cyan-300">Properties</a>
+      <span class="mx-1.5 text-slate-600">/</span>
+      <span class="text-slate-300">Poulomi Florique</span>
+    </div>
+
+    {/* HERO SECTION */}
+    <section class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="grid gap-8 lg:grid-cols-[1.1fr,0.9fr] items-start">
+        {/* Left: Title + narrative */}
+        <div class="space-y-4">
+          <span class="inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-slate-900/70 px-3 py-1 text-[11px] uppercase tracking-[0.16em] text-cyan-200">
+            <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping-once"></span>
+            Launching in North Bangalore
+          </span>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
+            Poulomi Florique – Life in Full Bloom on{" "}
+            <span class="text-cyan-300">Thanisandra Main Road</span>
+          </h1>
+
+          <p class="text-sm sm:text-base text-slate-200 max-w-2xl">
+            Florique is a nature-forward, premium apartment community by {developerName}, 
+            designed around their signature Bloomscapes® landscaping concept. 
+            Spread across {landArea}, the project blends 3 BHK homes, large open podiums, 
+            and over {amenitiesCount} to create a quiet, garden-like pocket 
+            in rapidly growing North Bangalore.
+          </p>
+
+          <div class="grid gap-3 text-xs sm:text-sm text-slate-200 max-w-xl">
+            <div class="flex gap-2">
+              <span class="mt-0.5 inline-block h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+              <p>Vastu-compliant 3 BHK homes with privacy-led planning and sizeable unit sizes.</p>
+            </div>
+            <div class="flex gap-2">
+              <span class="mt-0.5 inline-block h-1.5 w-1.5 rounded-full bg-cyan-400"></span>
+              <p>Bloomscapes® floral landscapes with dedicated thematic gardens and calm outdoor pockets.</p>
+            </div>
+            <div class="flex gap-2">
+              <span class="mt-0.5 inline-block h-1.5 w-1.5 rounded-full bg-amber-300"></span>
+              <p>Strategic location next to Bhartiya City with strong rental and long-term appreciation potential.</p>
+            </div>
+          </div>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a
+              href="#enquire"
+              class="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-5 py-2 text-xs sm:text-sm font-medium text-slate-900 shadow-lg shadow-cyan-400/40 hover:bg-cyan-300 transition-colors"
+            >
+              Request a Call Back
+            </a>
+            <a
+              href={brochureUrl}
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex items-center gap-2 rounded-full border border-slate-500/70 bg-slate-900/70 px-5 py-2 text-xs sm:text-sm text-slate-100 hover:border-cyan-300/70 hover:text-cyan-100 transition-colors"
+            >
+              Download Official Brochure (PDF)
+            </a>
+          </div>
+        </div>
+
+        {/* Right: Project stats card */}
+        <aside class="relative">
+          <div class="rounded-3xl border border-white/10 bg-slate-900/80 backdrop-blur-2xl shadow-[0_0_45px_rgba(15,23,42,0.9)] p-5 space-y-5">
+            <div class="flex items-center justify-between gap-3">
+              <div>
+                <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Flagship Project</p>
+                <p class="text-sm font-medium text-slate-100">
+                  Poulomi Florique – North Bangalore
+                </p>
+              </div>
+              <span class="inline-flex items-center rounded-full border border-emerald-400/50 bg-emerald-400/10 px-3 py-1 text-[10px] uppercase tracking-[0.16em] text-emerald-200">
+                Bloomscapes® Living
+              </span>
+            </div>
+
+            <dl class="grid grid-cols-2 gap-4 text-xs sm:text-[13px] text-slate-200">
+              <div>
+                <dt class="text-slate-400">Location</dt>
+                <dd class="font-medium">{locationLine}</dd>
+              </div>
+              <div>
+                <dt class="text-slate-400">Configuration</dt>
+                <dd class="font-medium">{configSummary}</dd>
+              </div>
+              <div>
+                <dt class="text-slate-400">Land Area</dt>
+                <dd class="font-medium">{landArea}</dd>
+              </div>
+              <div>
+                <dt class="text-slate-400">Total Units</dt>
+                <dd class="font-medium">{totalUnits}</dd>
+              </div>
+              <div>
+                <dt class="text-slate-400">Open Spaces</dt>
+                <dd class="font-medium">{openSpace}</dd>
+              </div>
+              <div>
+                <dt class="text-slate-400">Amenities</dt>
+                <dd class="font-medium">{amenitiesCount}</dd>
+              </div>
+            </dl>
+
+            <div class="border-t border-white/10 pt-4 text-xs text-slate-300 space-y-1.5">
+              <p>
+                <span class="font-semibold text-slate-100">Developer:</span> {developerName}
+              </p>
+              <p class="text-[11px] leading-relaxed text-slate-400">
+                All project information is based on publicly available material and developer communication.
+                Please reconfirm current details, pricing and availability at the time of enquiry.
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    {/* PROJECT SNAPSHOT */}
+    <section id="overview" class="mx-auto max-w-7xl px-6 lg:px-10 mt-10 lg:mt-14 space-y-6">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-semibold text-white">Project Snapshot</h2>
+          <p class="text-sm text-slate-300">
+            A quick overview of what makes Florique an interesting pick for end-users and investors.
+          </p>
+        </div>
+        <div class="text-[11px] text-slate-400">
+          RERA details, current status and inventory will be updated once officially available.
+        </div>
+      </div>
+
+      <div class="grid gap-5 lg:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+          <p class="text-[11px] uppercase tracking-[0.18em] text-cyan-300">Configuration & Scale</p>
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-200">
+            <li>• 9-acre community with approx. 768 apartments.</li>
+            <li>• Predominantly 3 BHK apartments with select 2.5 BHK options.</li>
+            <li>• Vastu-compliant planning with privacy-led layouts.</li>
+            <li>• Unit sizes ranging roughly from ~1585 to ~2740 sq.ft (2.5 & 3 BHK variants).</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+          <p class="text-[11px] uppercase tracking-[0.18em] text-amber-300">Bloomscapes® & Open Spaces</p>
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-200">
+            <li>• 80–85% open, floral-themed spaces inspired by Bangalore’s garden-city legacy.</li>
+            <li>• Dedicated gardens: butterfly, fragrant, herb & ginger, reflexology and leisure lawns.</li>
+            <li>• Vehicle-free podium experience with walking trails and sit-out pockets.</li>
+            <li>• Landscaped arrival zones, event lawns and community courtyards.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+          <p class="text-[11px] uppercase tracking-[0.18em] text-emerald-300">Lifestyle & Wellness</p>
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-200">
+            <li>• ~52,900 sq.ft clubhouse with indoor gym, games, studios and social lounges.</li>
+            <li>• Dedicated sports & wellness zone with courts, rinks and fitness corners.</li>
+            <li>• Multiple pools – lap pool, kids pool, Jacuzzi-style features and aquatic decks.</li>
+            <li>• Thoughtful zoning for kids, seniors, work-from-home and social gatherings.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {/* LOCATION & CONNECTIVITY */}
+    <section id="location" class="mx-auto max-w-7xl px-6 lg:px-10 mt-12 lg:mt-16 grid gap-8 lg:grid-cols-[1.1fr,0.9fr] items-start">
+      <div class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-semibold text-white">
+          Location & Connectivity – Thanisandra Main Road, North Bangalore
+        </h2>
+        <p class="text-sm sm:text-base text-slate-200">
+          Florique sits just off Thanisandra Main Road, next to Bhartiya City – one of North Bangalore’s most
+          established integrated townships. That means residents plug into a ready ecosystem of offices, schools,
+          retail and hospitality, while still living inside a quieter, nature-focused enclave.
+        </p>
+        <ul class="space-y-1.5 text-xs sm:text-sm text-slate-200">
+          <li>• Immediate access to Bhartiya City IT, residential and retail ecosystem.</li>
+          <li>• Good proximity to Manyata Tech Park, Karle SEZ and other key employment hubs.</li>
+          <li>• Connectivity via ORR and planned/upcoming Metro corridors across North Bangalore.</li>
+          <li>• Social infra including schools, hospitals and malls within a practical drive-time radius.</li>
+        </ul>
+        <p class="text-xs text-slate-400">
+          Travel times and connectivity are indicative based on current infrastructure; they may improve further
+          with ongoing road and metro upgrades.
+        </p>
+      </div>
+
+      {/* simple location highlights list */}
+      <div class="rounded-3xl border border-white/10 bg-slate-900/80 p-5 space-y-4">
+        <p class="text-[11px] uppercase tracking-[0.2em] text-slate-400">Neighbourhood Highlights</p>
+        <dl class="space-y-2 text-xs sm:text-sm text-slate-200">
+          <div class="flex items-start justify-between gap-4 border-b border-white/5 pb-2">
+            <dt>Bhartiya Mall of Bengaluru</dt>
+            <dd class="text-slate-400 text-[11px]">Approx. short drive via internal township roads</dd>
+          </div>
+          <div class="flex items-start justify-between gap-4 border-b border-white/5 pb-2">
+            <dt>Manyata Tech Park</dt>
+            <dd class="text-slate-400 text-[11px]">Approx. 25–30 min drive, depending on traffic</dd>
+          </div>
+          <div class="flex items-start justify-between gap-4 border-b border-white/5 pb-2">
+            <dt>Elements Mall / Hebbal</dt>
+            <dd class="text-slate-400 text-[11px]">Approx. 20–30 min belt</dd>
+          </div>
+          <div class="flex items-start justify-between gap-4 border-b border-white/5 pb-2">
+            <dt>Kempegowda International Airport</dt>
+            <dd class="text-slate-400 text-[11px]">Approx. 30–40 min depending on time of day</dd>
+          </div>
+          <div class="flex items-start justify-between gap-4">
+            <dt>Schools & Healthcare</dt>
+            <dd class="text-slate-400 text-[11px]">
+              DPS North, REVA University, Orchids, leading hospitals & clinics in the wider North Bangalore belt.
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    {/* AMENITIES & LIFESTYLE */}
+    <section id="amenities" class="mx-auto max-w-7xl px-6 lg:px-10 mt-12 lg:mt-16 space-y-6">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-semibold text-white">Amenities & Everyday Lifestyle</h2>
+          <p class="text-sm text-slate-300">
+            Designed as a complete lifestyle campus with strong emphasis on outdoor life, sports and social spaces.
+          </p>
+        </div>
+        <p class="text-[11px] text-slate-400 max-w-sm">
+          Exact amenity list, phasing and access rules are as per the final agreement and developer documentation.
+        </p>
+      </div>
+
+      <div class="grid gap-5 lg:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+          <p class="text-[11px] uppercase tracking-[0.18em] text-cyan-300">Sports & Wellness</p>
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-200">
+            <li>• Full basketball court, tennis court and dedicated futsal court.</li>
+            <li>• Multiple pickleball courts catering to new-age sports demand.</li>
+            <li>• Roller skating rink, fitness corners and jogging / walking paths.</li>
+            <li>• Large indoor gymnasium and studio spaces under the clubhouse.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+          <p class="text-[11px] uppercase tracking-[0.18em] text-amber-300">Water, Greens & Calm</p>
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-200">
+            <li>• 25M lap pool, kids’ pool, bubbling pools and water features.</li>
+            <li>• Floral parterre, butterfly gardens and fragrant / herb gardens.</li>
+            <li>• Reflexology garden and elderly-friendly seating zones.</li>
+            <li>• Pet garden, sit-out decks and quiet corners for reading or work.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+          <p class="text-[11px] uppercase tracking-[0.18em] text-emerald-300">Clubhouse & Community</p>
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-200">
+            <li>• Multi-purpose halls, party lounges and social gathering spaces.</li>
+            <li>• Business lounge, co-working style corners and tuition / AV rooms.</li>
+            <li>• Creche, kids’ play areas and teen hangout pockets.</li>
+            <li>• Zonal planning to separate high-energy and calm-use areas.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {/* FLOOR PLANS & UNIT MIX */}
+    <section id="plans" class="mx-auto max-w-7xl px-6 lg:px-10 mt-12 lg:mt-16 grid gap-8 lg:grid-cols-[1.05fr,0.95fr] items-start">
+      <div class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-semibold text-white">Floor Plans & Unit Mix</h2>
+        <p class="text-sm sm:text-base text-slate-200">
+          Florique offers a range of 2.5 and 3 BHK layouts with generous living spaces, wide frontages and
+          thoughtful storage. While exact plans should be checked in the official brochure and with the sales
+          team, the broad unit mix is as below:
+        </p>
+        <ul class="space-y-1.5 text-xs sm:text-sm text-slate-200">
+          <li>• 2.5 BHK homes around ~1585 sq.ft (select towers).</li>
+          <li>• 3 BHK homes in multiple variants from ~1780 sq.ft up to ~2030 sq.ft.</li>
+          <li>• Larger 3 BHK + maid / study homes in the ~2200–2700+ sq.ft range.</li>
+          <li>• No common walls between units as per brochure, aiding privacy and acoustic comfort.</li>
+          <li>• Higher floor-to-ceiling height in living zones (as highlighted by the developer), giving an airy feel.</li>
+        </ul>
+        <p class="text-xs text-slate-400">
+          For exact floor plans, stack diagrams and tower-wise availability, please refer to the official 
+          Florique brochure and confirm the latest version with the developer or authorised channel partners.
+        </p>
+      </div>
+
+      {/* Placeholder for floor-plan imagery */}
+      <div class="rounded-3xl border border-dashed border-white/20 bg-slate-900/60 p-5 flex flex-col items-center justify-center text-center gap-3">
+        <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">
+          Floor Plans / Master Plan Visual
+        </p>
+        <p class="text-xs sm:text-sm text-slate-200 max-w-xs">
+          You can embed tower-wise floor plan images or a master plan visual here once your media library
+          is finalised. For now, this acts as a placeholder, keeping the layout ready.
+        </p>
+        <span class="rounded-full border border-slate-600/70 px-3 py-1 text-[11px] text-slate-300">
+          Suggested ratio: 16:9 or 4:3 high-resolution PNG / JPG
+        </span>
+      </div>
+    </section>
+
+    {/* SPECIFICATIONS */}
+    <section id="specifications" class="mx-auto max-w-7xl px-6 lg:px-10 mt-12 lg:mt-16 space-y-6">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-semibold text-white">Key Specifications (Highlights)</h2>
+          <p class="text-sm text-slate-300">
+            A quick summary of the structural and interior specification direction, as presented in the brochure.
+          </p>
+        </div>
+        <p class="text-[11px] text-slate-400 max-w-sm">
+          For contractual specifics, always refer to the official specification sheet attached to the agreement.
+        </p>
+      </div>
+
+      <div class="grid gap-5 lg:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+          <p class="text-[11px] uppercase tracking-[0.18em] text-cyan-300">Structure & Shell</p>
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-200">
+            <li>• RCC structural shear wall system as per relevant IS codes.</li>
+            <li>• Exterior envelope finished with texture and exterior-grade paints.</li>
+            <li>• Vitrified tiles for common lobbies and circulation spaces.</li>
+            <li>• Basement and parking areas finished with appropriate VDF / marked flooring.</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+          <p class="text-[11px] uppercase tracking-[0.18em] text-amber-300">Interiors & Finishes</p>
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-200">
+            <li>• Large-format vitrified tiles in living, dining, kitchen and key bedrooms.</li>
+            <li>• Bathrooms with vitrified tile flooring and dado, plus grid false ceilings.</li>
+            <li>• Walls with putty, primer and low-VOC emulsion paints across rooms.</li>
+            <li>• UPVC windows, balcony doors and 8 ft. factory-made internal doors (as per brochure).</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+          <p class="text-[11px] uppercase tracking-[0.18em] text-emerald-300">MEP, Safety & Smart Features</p>
+          <ul class="space-y-1.5 text-xs sm:text-sm text-slate-200">
+            <li>• Gravity-based water system with treated water and individual metering.</li>
+            <li>• FTTH / TV and internet provision across key rooms.</li>
+            <li>• Fire detection and suppression systems as per regulations.</li>
+            <li>• Digital main door locks, app-based communication and EV charging provisions in parking (as per brochure).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {/* INVESTMENT VIEW */}
+    <section id="investment" class="mx-auto max-w-7xl px-6 lg:px-10 mt-12 lg:mt-16 grid gap-8 lg:grid-cols-[1.1fr,0.9fr] items-start">
+      <div class="space-y-4">
+        <h2 class="text-xl sm:text-2xl font-semibold text-white">
+          Investment View – North Bangalore & Florique’s Positioning
+        </h2>
+        <p class="text-sm sm:text-base text-slate-200">
+          North Bangalore has been one of the most closely watched corridors in the city, thanks to the airport,
+          tech parks, large integrated townships and steady infrastructure upgrades. For serious buyers and
+          investors, Florique aims to sit at the intersection of lifestyle, sustainability and long-term value.
+        </p>
+        <ul class="space-y-1.5 text-xs sm:text-sm text-slate-200">
+          <li>• Market studies indicate mid-to-premium projects in North Bangalore have seen ~5–10% annual capital appreciation in recent years.</li>
+          <li>• Rental yields in quality projects near major tech hubs often hover in the ~4–5% band, especially for well-sized 3 BHK units.</li>
+          <li>• Florique’s adjacency to Bhartiya City, and proximity to Manyata and other employment centres, supports both end-use and rental demand.</li>
+          <li>• The Bloomscapes® concept and sustainability-forward positioning may appeal to a more discerning, long-term audience.</li>
+        </ul>
+        <p class="text-xs text-slate-400">
+          This is not investment advice. Always evaluate your own financial situation, risk profile and conduct
+          independent due diligence or speak to a professional advisor before making a purchase decision.
+        </p>
+      </div>
+
+      <div class="rounded-3xl border border-white/10 bg-slate-900/80 p-5 space-y-3 text-xs sm:text-sm text-slate-200">
+        <p class="text-[11px] uppercase tracking-[0.2em] text-slate-400">
+          Who Might Florique Suit?
+        </p>
+        <ul class="space-y-1.5">
+          <li>• IT / tech professionals working in Manyata, Bhartiya or neighbouring tech belts.</li>
+          <li>• Families upgrading from older 2/3 BHKs who value open spaces and curated amenities.</li>
+          <li>• Investors looking at North Bangalore as a 7–10 year horizon story with relatively stable demand.</li>
+          <li>• NRIs and outstation buyers seeking a master-planned, township-adjacent community.</li>
+        </ul>
+        <p class="text-[11px] text-slate-400 pt-2 border-t border-white/10">
+          Brick.com acts as a channel partner, helping you compare, shortlist and visit projects like Florique with
+          additional context around micro-market trends, rental demand and long-term livability.
+        </p>
+      </div>
+    </section>
+
+    {/* FAQ SECTION */}
+    <section id="faq" class="mx-auto max-w-7xl px-6 lg:px-10 mt-12 lg:mt-16 space-y-6">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-semibold text-white">Frequently Asked Questions</h2>
+          <p class="text-sm text-slate-300">
+            Some of the common questions serious buyers usually ask about a project like Florique.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-2 text-xs sm:text-sm text-slate-200">
+        <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-50 text-sm">
+            Where exactly is Poulomi Florique located in North Bangalore?
+          </h3>
+          <p>
+            Florique is planned on Thanisandra Main Road, in the North Bangalore belt, 
+            near Bhartiya City and within driving distance of Manyata Tech Park and Hebbal.
+            This gives it access to both township-style conveniences and wider city connectivity.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-50 text-sm">
+            What configurations and sizes are available at Florique?
+          </h3>
+          <p>
+            As per the current brochure, the project is largely focused on 3 BHK apartments, 
+            with select 2.5 BHK layouts. Unit sizes span roughly from the mid-1500 sq.ft range 
+            up to the 2700+ sq.ft bracket across different towers and variants.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-50 text-sm">
+            Is Poulomi Florique a good fit for pure investors, or mainly end-users?
+          </h3>
+          <p>
+            The project is positioned as an end-user friendly, lifestyle community with a strong amenity mix and
+            landscape focus. However, the North Bangalore story, adjacency to major tech hubs and township
+            ecosystem also make it relevant for investors looking at rental yield and long-term appreciation.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-50 text-sm">
+            What kind of amenities can residents expect inside the project?
+          </h3>
+          <p>
+            Residents get access to a large clubhouse, multiple indoor and outdoor sports courts, gym, pools, 
+            children’s play areas, party lounges, co-working style spaces, and several themed gardens and 
+            lawns designed around the Bloomscapes® concept.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-50 text-sm">
+            When is possession expected and how should I verify timelines?
+          </h3>
+          <p>
+            Timelines can shift with approvals, construction and market factors. Always check the latest RERA
+            registration details, construction status and possession commitment directly with the developer
+            or through official documentation before finalising your decision.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+          <h3 class="font-semibold text-slate-50 text-sm">
+            How can Brick.com help me if I’m evaluating Florique?
+          </h3>
+          <p>
+            As a channel partner, Brick.com can help you with shortlisting, site visits, comparing Florique 
+            with other North Bangalore options, and understanding the micro-market better – from liveability 
+            and commute to rental potential and long-term planning.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* ENQUIRY / CTA STRIP */}
+    <section
+      id="enquire"
+      class="mx-auto max-w-7xl px-6 lg:px-10 mt-12 lg:mt-16 mb-12 lg:mb-20"
+    >
+      <div class="rounded-3xl border border-cyan-400/40 bg-gradient-to-r from-slate-900/90 via-slate-900/80 to-slate-900/90 px-6 py-6 lg:px-10 lg:py-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+        <div class="space-y-2 max-w-xl">
+          <p class="text-[11px] uppercase tracking-[0.2em] text-cyan-200">
+            Ready to explore Poulomi Florique?
+          </p>
+          <h2 class="text-lg sm:text-xl font-semibold text-white">
+            Get a curated walkthrough of the project, neighbourhood and investment angle.
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-200">
+            Share your details on our contact page and mention &ldquo;Poulomi Florique&rdquo; in the message.
+            Our team will help you with project information, comparisons and next steps.
+          </p>
+        </div>
+        <a
+          href="/contact?project=poulomi-florique"
+          class="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-5 py-2 text-xs sm:text-sm font-medium text-slate-900 shadow-lg shadow-cyan-400/40 hover:bg-cyan-300 transition-colors"
+        >
+          Go to Contact Form
+        </a>
+      </div>
+    </section>
+
+    {/* Basic JSON-LD for SEO */}
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ApartmentComplex",
+        name: "Poulomi Florique",
+        url: "https://brick-inky-peach.vercel.app/properties/poulomi-florique",
+        description: pageDescription,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Bengaluru",
+          addressRegion: "Karnataka",
+          addressCountry: "IN",
+          streetAddress: "Thanisandra Main Road, near Bhartiya City, North Bangalore"
+        },
+        numberOfRooms: 3,
+        numberOfUnits: 768,
+        petsAllowed: "Yes",
+        amenityFeature: [
+          { "@type": "LocationFeatureSpecification", name: "Clubhouse ~52,900 sq.ft" },
+          { "@type": "LocationFeatureSpecification", name: "Swimming pool and kids’ pool" },
+          { "@type": "LocationFeatureSpecification", name: "Sports courts – basketball, tennis, futsal, pickleball" },
+          { "@type": "LocationFeatureSpecification", name: "Themed gardens and Bloomscapes® landscaping" }
+        ],
+        containedInPlace: {
+          "@type": "Place",
+          name: "North Bangalore"
+        }
+      })}
+    </script>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>
