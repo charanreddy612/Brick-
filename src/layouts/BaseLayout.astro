@@ -1,6 +1,5 @@
 ---
 import "../styles/global.css";
-import BackgroundMotion from "../components/BackgroundMotion.astro";
 
 export interface Props {
   title?: string;
@@ -21,11 +20,20 @@ const {
     <meta name="description" content={description} />
     <link rel="icon" href="/favicon.ico" />
   </head>
-  <body class="bg-[#050815] text-slate-100 antialiased">
-    <!-- Global animated background for all pages -->
-    <BackgroundMotion />
+  <body class="bg-slate-950 text-slate-100 antialiased">
+    <!-- GLOBAL animated background (for the whole website) -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+      <!-- Solid base -->
+      <div class="absolute inset-0 bg-slate-950"></div>
 
-    <!-- Actual page content sits above the motion layer -->
+      <!-- Slow-moving color glow -->
+      <div class="absolute -inset-24 blur-3xl opacity-80 bg-animated-gradient"></div>
+
+      <!-- Soft grid overlay -->
+      <div class="absolute inset-0 bg-grid-soft opacity-[0.18] mix-blend-soft-light"></div>
+    </div>
+
+    <!-- Actual page content -->
     <div class="relative min-h-screen flex flex-col overflow-x-hidden">
       <slot />
     </div>
