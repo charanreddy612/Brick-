@@ -1,0 +1,154 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+
+const pageTitle = "Contact Brick.com – Talk to a Real Estate Advisor";
+const pageDescription =
+  "Get in touch with Brick.com for curated project recommendations, site visits and honest guidance on North Bangalore and Hyderabad markets. Connect with our advisors to explore the right projects for your needs.";
+
+const projectFromQuery = Astro.url.searchParams.get("project") || "";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main class="pt-6 pb-14 lg:pb-20">
+    {/* Breadcrumb */}
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 mt-4 mb-6 text-xs text-slate-400">
+      <a href="/" class="hover:text-cyan-300">Home</a>
+      <span class="mx-1.5 text-slate-600">/</span>
+      <span class="text-slate-300">Contact Us</span>
+    </div>
+
+    {/* Page Title */}
+    <section class="mx-auto max-w-7xl px-6 lg:px-10">
+      <div class="max-w-2xl space-y-3">
+        <h1 class="text-3xl sm:text-4xl font-semibold text-white">
+          Contact Us – Let’s Talk Real Estate
+        </h1>
+        <p class="text-sm sm:text-base text-slate-300">
+          Buying a home or investing in real estate shouldn’t feel complicated.
+          Share your requirements, and our advisors will guide you with unbiased insights,
+          realistic comparisons and on-ground experience.
+        </p>
+      </div>
+    </section>
+
+    {/* Main Contact Layout */}
+    <section class="mx-auto max-w-7xl px-6 lg:px-10 mt-8 lg:mt-10 grid gap-8 lg:grid-cols-[0.9fr,1.1fr] items-start">
+      {/* Left: Contact info & trust messaging */}
+      <aside class="space-y-6">
+        <div class="rounded-3xl border border-white/10 bg-slate-900/80 p-5 lg:p-6 space-y-4 shadow-[0_0_32px_rgba(15,23,42,0.8)]">
+          <p class="text-[11px] uppercase tracking-[0.2em] text-cyan-200">
+            How We Can Help
+          </p>
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-200">
+            <li>• Shortlist the right projects based on your needs & budget.</li>
+            <li>• Explain location growth, pricing trends and real appreciation stories.</li>
+            <li>• Assist with site visits and developer-level interactions.</li>
+            <li>• Support comparisons across floor plans, builder reputation & ROI possibilities.</li>
+          </ul>
+        </div>
+
+        {/* Contact Details */}
+        <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-5 space-y-5">
+          <p class="text-[11px] uppercase tracking-[0.2em] text-slate-400">
+            Connect With Us
+          </p>
+
+          <dl class="space-y-4 text-xs sm:text-sm text-slate-200">
+
+            <div>
+              <dt class="text-slate-400">Phone / WhatsApp</dt>
+              <dd class="font-medium">
+                +91 79890 41017 / +91 99855 31519
+              </dd>
+            </div>
+
+            <div>
+              <dt class="text-slate-400">Email</dt>
+              <dd class="font-medium">
+                contact@brick.com
+              </dd>
+            </div>
+
+            <div>
+              <dt class="text-slate-400">Hyderabad Office</dt>
+              <dd class="font-medium">
+                Rajapushpa Lifestyle City,<br />
+                Tellapur, Hyderabad,<br />
+                Telangana 502034<br />
+                Contact: +91 99855 31519
+              </dd>
+            </div>
+
+            <div>
+              <dt class="text-slate-400">Bangalore Office</dt>
+              <dd class="font-medium">
+                Golden Blossom Apartments,<br />
+                Ward No. 83, Sai Baba Ashram,<br />
+                Whitefield - Hoskote Rd,<br />
+                Opp. Belatur Colony, Kadugodi,<br />
+                Bengaluru, Karnataka 560067<br />
+                Contact: +91 79890 41017
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="rounded-3xl border border-amber-400/40 bg-slate-900/80 p-4 space-y-2">
+          <p class="text-[11px] uppercase tracking-[0.2em] text-amber-200">
+            Important
+          </p>
+          <p class="text-xs sm:text-sm text-slate-100">
+            Brick.com acts as an authorised channel partner. We do not collect booking payments online.
+            All transactions are processed only directly with the developer.
+          </p>
+        </div>
+      </aside>
+
+      {/* Right: Contact form */}
+      <section class="rounded-3xl border border-white/10 bg-slate-900/80 p-5 lg:p-7 shadow-[0_0_32px_rgba(15,23,42,0.8)]">
+        <p class="text-[11px] uppercase tracking-[0.2em] text-cyan-200 mb-4">
+          Share Your Details
+        </p>
+
+        <form class="space-y-4" method="POST" action="#">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="space-y-1">
+              <label class="text-xs text-slate-200">Full Name</label>
+              <input type="text" required class="w-full rounded-xl border border-slate-600 bg-slate-950/60 px-3 py-2 text-sm" />
+            </div>
+            <div class="space-y-1">
+              <label class="text-xs text-slate-200">Email Address</label>
+              <input type="email" class="w-full rounded-xl border border-slate-600 bg-slate-950/60 px-3 py-2 text-sm" />
+            </div>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="space-y-1">
+              <label class="text-xs text-slate-200">Phone / WhatsApp</label>
+              <input type="text" class="w-full rounded-xl border border-slate-600 bg-slate-950/60 px-3 py-2 text-sm" />
+            </div>
+            <div class="space-y-1">
+              <label class="text-xs text-slate-200">Project (optional)</label>
+              <input type="text" value={projectFromQuery} class="w-full rounded-xl border border-slate-600 bg-slate-950/60 px-3 py-2 text-sm" />
+            </div>
+          </div>
+
+          <div class="space-y-1">
+            <label class="text-xs text-slate-200">Message</label>
+            <textarea rows={4} class="w-full rounded-xl border border-slate-600 bg-slate-950/60 px-3 py-2 text-sm"></textarea>
+          </div>
+
+          <button type="submit" class="w-full rounded-full bg-cyan-400 py-2 text-sm font-medium text-slate-900 shadow-lg hover:bg-cyan-300">
+            Submit Enquiry
+          </button>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>
