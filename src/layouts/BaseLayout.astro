@@ -1,0 +1,26 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Brick.com – Curated Real Estate Across India",
+  description = "Discover verified residential projects with strong fundamentals, future-ready amenities, and trustworthy developers – handpicked for serious buyers and investors.",
+} = Astro.props;
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body class="bg-[#050815] text-slate-100 antialiased">
+    <div class="min-h-screen flex flex-col overflow-x-hidden">
+      <slot />
+    </div>
+  </body>
+</html>
