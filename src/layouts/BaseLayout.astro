@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import BackgroundMotion from "../components/BackgroundMotion.astro";
 
 export interface Props {
   title?: string;
@@ -11,6 +12,7 @@ const {
   description = "Discover verified residential projects with strong fundamentals, future-ready amenities, and trustworthy developers – handpicked for serious buyers and investors.",
 } = Astro.props;
 ---
+
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
@@ -20,7 +22,11 @@ const {
     <link rel="icon" href="/favicon.ico" />
   </head>
   <body class="bg-[#050815] text-slate-100 antialiased">
-    <div class="min-h-screen flex flex-col overflow-x-hidden">
+    <!-- Global animated background for all pages -->
+    <BackgroundMotion />
+
+    <!-- Actual page content sits above the motion layer -->
+    <div class="relative min-h-screen flex flex-col overflow-x-hidden">
       <slot />
     </div>
   </body>
