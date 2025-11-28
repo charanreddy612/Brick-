@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+
+const pageTitle = "About Brick.com – Trusted Real Estate Advisory Built on Expertise, Ethics & Emotion";
+const pageDescription =
+  "Brick.com helps home-buyers and investors make confident, research-backed decisions through verified project insights, transparency and personalised advisory across Bangalore, Hyderabad, India and growing international markets.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main class="pt-6 pb-16 lg:pb-20">
+    {/* Breadcrumb */}
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 mt-4 mb-6 text-xs text-slate-400">
+      <a href="/" class="hover:text-cyan-300">Home</a>
+      <span class="mx-1.5 text-slate-600">/</span>
+      <span class="text-slate-300">About Us</span>
+    </div>
+
+    {/* Title */}
+    <section class="mx-auto max-w-7xl px-6 lg:px-10 space-y-5">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white max-w-5xl leading-tight">
+        Real Estate Built on <span class="text-cyan-300">Honesty, Research and Genuine Care</span>
+      </h1>
+
+      <p class="text-sm sm:text-base text-slate-300 max-w-3xl leading-relaxed">
+        For us, real estate is not just about buying property. It’s about fulfilling a dream —
+        the dream of a safe, honest and lasting home. We come from backgrounds where owning a home once felt like a
+        faraway aspiration. We personally experienced the confusion, broken promises and uncertainty of choosing the
+        right builders, projects and locations. Those struggles shaped us. They became our purpose.
+      </p>
+    </section>
+
+    {/* Story Section */}
+    <section class="mx-auto max-w-7xl px-6 lg:px-10 mt-10 lg:mt-14 grid gap-10 lg:grid-cols-2 items-start">
+      <div class="space-y-4 text-sm sm:text-base text-slate-200 leading-relaxed">
+        <p>
+          With more than <span class="font-semibold text-cyan-300">14 years of real estate experience</span>,
+          we created Brick.com with a mission to put trust before transactions and people before profit.
+          Every project we represent is manually verified — from developer credibility and construction quality
+          to legal documentation, location potential and long-term value.
+        </p>
+
+        <p>
+          We partner only with companies that meet strict, mandatory standards, so that you never compromise on
+          peace of mind, financial security and future appreciation.
+        </p>
+
+        <p class="font-medium text-amber-300">
+          Trust over remuneration — always. Numbers matter, but people matter more.
+        </p>
+
+        <p>
+          So far, we’ve been privileged to help more than <span class="font-semibold text-cyan-300">
+          400+ clients across India and Dubai</span> find homes they feel truly proud of.
+          Today, we are expanding into <span class="font-semibold text-amber-300">
+          Central and North America</span>, bringing the same values, ethics and personal attention into every market.
+        </p>
+
+        <p>
+          The driving force behind this vision are our founders —
+          <span class="font-semibold text-cyan-300"> Mr. Sakethan Reddy Kotha (SRK) </span>
+          and <span class="font-semibold text-cyan-300"> Mr. Sai Charan Reddy </span>.
+          Together, with our dedicated partners, we are building a community where transparent developers
+          and informed buyers connect with respect and clarity.
+        </p>
+
+        <p class="italic text-slate-300">
+          If you believe that a home should be honest, transparent and truly yours,
+          then you’re already a part of our story.
+        </p>
+      </div>
+
+      <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 space-y-4 shadow-[0_0_32px_rgba(15,23,42,0.8)]">
+        <h3 class="text-sm font-semibold text-slate-100">What We Stand For</h3>
+        <ul class="space-y-2 text-xs sm:text-sm text-slate-200">
+          <li>• Verified projects with strict quality & transparency screening</li>
+          <li>• Personal advisory tailored to real budgets & real life goals</li>
+          <li>• Hyper-local research & market intelligence</li>
+          <li>• No aggressive selling or misleading commitments</li>
+          <li>• End-to-end guidance from discovery to decision-making</li>
+        </ul>
+      </div>
+    </section>
+
+    {/* CTA */}
+    <section class="mx-auto max-w-7xl px-6 lg:px-10 mt-14">
+      <div class="rounded-3xl border border-cyan-300/40 bg-slate-900/80 p-6 lg:p-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+        <div class="space-y-2 max-w-xl">
+          <p class="text-[11px] uppercase tracking-[0.2em] text-cyan-200">Let’s Connect</p>
+          <h2 class="text-lg sm:text-xl font-semibold text-white">We’d love to understand your requirements</h2>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Speak to our advisory team for a transparent discussion — no pressure, no obligations.
+          </p>
+        </div>
+
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-6 py-2.5 text-sm font-semibold text-slate-900 shadow-lg hover:bg-cyan-300 transition"
+        >
+          Contact Us
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>
