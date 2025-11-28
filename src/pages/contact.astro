@@ -5,7 +5,7 @@ import SiteFooter from "../components/SiteFooter.astro";
 
 const pageTitle = "Contact Brick.com – Talk to a Real Estate Advisor";
 const pageDescription =
-  "Get in touch with Brick.com for curated project recommendations, site visits and honest guidance on North Bangalore and Hyderabad markets. Connect with our advisors to explore the right projects for your needs.";
+  "Get in touch with Brick.com for curated project recommendations, site visits and honest guidance on Bangalore and Hyderabad real estate. Connect with our advisors to explore the right projects for your needs.";
 
 const projectFromQuery = Astro.url.searchParams.get("project") || "";
 ---
@@ -58,7 +58,6 @@ const projectFromQuery = Astro.url.searchParams.get("project") || "";
           </p>
 
           <dl class="space-y-4 text-xs sm:text-sm text-slate-200">
-
             <div>
               <dt class="text-slate-400">Phone / WhatsApp</dt>
               <dd class="font-medium">
@@ -89,7 +88,7 @@ const projectFromQuery = Astro.url.searchParams.get("project") || "";
                 Golden Blossom Apartments,<br />
                 Ward No. 83, Sai Baba Ashram,<br />
                 Whitefield - Hoskote Rd,<br />
-                Opp. Belatur Colony, Kadugodi,<br />
+                Opposite to Belatur Colony, Kadugodi,<br />
                 Bengaluru, Karnataka 560067<br />
                 Contact: +91 79890 41017
               </dd>
@@ -103,7 +102,7 @@ const projectFromQuery = Astro.url.searchParams.get("project") || "";
           </p>
           <p class="text-xs sm:text-sm text-slate-100">
             Brick.com acts as an authorised channel partner. We do not collect booking payments online.
-            All transactions are processed only directly with the developer.
+            All transactions are processed only directly with the respective developer.
           </p>
         </div>
       </aside>
@@ -115,39 +114,138 @@ const projectFromQuery = Astro.url.searchParams.get("project") || "";
         </p>
 
         <form class="space-y-4" method="POST" action="#">
+          {/* Row 1: Name & Email */}
           <div class="grid gap-4 sm:grid-cols-2">
-            <div class="space-y-1">
-              <label class="text-xs text-slate-200">Full Name</label>
-              <input type="text" required class="w-full rounded-xl border border-slate-600 bg-slate-950/60 px-3 py-2 text-sm" />
+            <div class="space-y-1.5">
+              <label for="name" class="block text-xs font-medium text-slate-200">
+                Full Name
+              </label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                class="w-full rounded-xl border border-slate-600 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+                placeholder="Enter your full name"
+              />
             </div>
-            <div class="space-y-1">
-              <label class="text-xs text-slate-200">Email Address</label>
-              <input type="email" class="w-full rounded-xl border border-slate-600 bg-slate-950/60 px-3 py-2 text-sm" />
+
+            <div class="space-y-1.5">
+              <label for="email" class="block text-xs font-medium text-slate-200">
+                Email Address
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                class="w-full rounded-xl border border-slate-600 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+                placeholder="you@example.com"
+              />
             </div>
           </div>
 
+          {/* Row 2: Phone & Project */}
           <div class="grid gap-4 sm:grid-cols-2">
-            <div class="space-y-1">
-              <label class="text-xs text-slate-200">Phone / WhatsApp</label>
-              <input type="text" class="w-full rounded-xl border border-slate-600 bg-slate-950/60 px-3 py-2 text-sm" />
+            <div class="space-y-1.5">
+              <label for="phone" class="block text-xs font-medium text-slate-200">
+                Phone / WhatsApp
+              </label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                class="w-full rounded-xl border border-slate-600 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+                placeholder="+91 9XXXXXXXXX"
+              />
             </div>
-            <div class="space-y-1">
-              <label class="text-xs text-slate-200">Project (optional)</label>
-              <input type="text" value={projectFromQuery} class="w-full rounded-xl border border-slate-600 bg-slate-950/60 px-3 py-2 text-sm" />
+
+            <div class="space-y-1.5">
+              <label for="project" class="block text-xs font-medium text-slate-200">
+                Project (optional)
+              </label>
+              <input
+                id="project"
+                name="project"
+                type="text"
+                value={projectFromQuery}
+                class="w-full rounded-xl border border-slate-600 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+                placeholder="Eg. Poulomi Florique, North Bangalore"
+              />
             </div>
           </div>
 
-          <div class="space-y-1">
-            <label class="text-xs text-slate-200">Message</label>
-            <textarea rows={4} class="w-full rounded-xl border border-slate-600 bg-slate-950/60 px-3 py-2 text-sm"></textarea>
+          {/* Message */}
+          <div class="space-y-1.5">
+            <label for="message" class="block text-xs font-medium text-slate-200">
+              Tell us a bit about what you’re looking for
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows={4}
+              class="w-full rounded-xl border border-slate-600 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400"
+              placeholder="Eg. 3 BHK near Manyata / Whitefield, budget range, timeline, end-use or investment."
+            ></textarea>
           </div>
 
-          <button type="submit" class="w-full rounded-full bg-cyan-400 py-2 text-sm font-medium text-slate-900 shadow-lg hover:bg-cyan-300">
-            Submit Enquiry
-          </button>
+          {/* Consent */}
+          <div class="space-y-3 pt-1">
+            <label class="flex items-start gap-2 text-[11px] text-slate-300">
+              <input
+                type="checkbox"
+                name="consent"
+                class="mt-0.5 h-3.5 w-3.5 rounded border-slate-600 bg-slate-950 text-cyan-400 focus:ring-cyan-400"
+                required
+              />
+              <span>
+                I agree to be contacted by phone / WhatsApp / email regarding my enquiry.
+                I understand this is not a booking and does not create any legal obligation.
+              </span>
+            </label>
+
+            {/* Submit button */}
+            <button
+              type="submit"
+              class="w-full rounded-full bg-cyan-400 py-2.5 text-sm font-semibold text-slate-900 shadow-lg shadow-cyan-400/40 hover:bg-cyan-300 transition-colors"
+            >
+              Submit Enquiry
+            </button>
+
+            {/* WhatsApp direct button */}
+            <a
+              href="https://wa.me/917989041017?text=Hi%2C%20I%20saw%20your%20website%20and%20would%20like%20to%20discuss%20real%20estate%20projects."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-3 flex items-center justify-center gap-2 w-full rounded-full border border-green-400 bg-green-500/10 py-2.5 text-sm font-medium text-green-300 hover:bg-green-500/20 transition-colors"
+            >
+              💬 Chat on WhatsApp
+            </a>
+
+            <p class="text-[11px] text-slate-500">
+              Form submission handling (email / CRM / API) can be integrated next. For now, this layout
+              prepares all key fields you need from a serious enquiry.
+            </p>
+          </div>
         </form>
       </section>
     </section>
+
+    {/* Basic ContactPage JSON-LD for SEO */}
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        name: "Contact Brick.com",
+        description: pageDescription,
+        url: "https://brick-inky-peach.vercel.app/contact",
+        about: {
+          "@type": "Organization",
+          name: "Brick.com",
+          areaServed: "Bengaluru and Hyderabad, India"
+        }
+      })}
+    </script>
   </main>
 
   <SiteFooter />
