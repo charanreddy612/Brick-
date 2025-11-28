@@ -3,37 +3,16 @@
 @tailwind utilities;
 
 @layer utilities {
-  /* === Vertical moving lines (can be reused anywhere) === */
-  @keyframes line-slide {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-25%);
-    }
+  /* === Smooth horizontal marquee (testimonials) === */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 35s linear infinite;
   }
 
-  @keyframes line-slide-slow {
-    0% {
-      transform: translateY(10%);
-    }
-    100% {
-      transform: translateY(-20%);
-    }
-  }
-
-  /* === Soft pulsing glow === */
-  @keyframes pulse-slow {
-    0%,
-    100% {
-      opacity: 0.4;
-    }
-    50% {
-      opacity: 1;
-    }
-  }
-
-  /* === Small ping for "live" indicators === */
+  /* === Ping effect for "live" dots / labels === */
   @keyframes ping-once {
     0% {
       transform: scale(0.8);
@@ -45,115 +24,44 @@
       opacity: 0;
     }
   }
-
-  /* === Horizontal marquee (testimonials slider) === */
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  /* === Floating blocks (buildings / skyline feel) === */
-  @keyframes float-y {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
-  /* === Twinkling lights / sparks === */
-  @keyframes twinkle {
-    0%,
-    100% {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.1);
-    }
-  }
-
-  /* === Big gradient blobs for background motion === */
-  @keyframes blob-move {
-    0% {
-      transform: translate3d(0, 0, 0) scale(1);
-    }
-    50% {
-      transform: translate3d(40px, -40px, 0) scale(1.15);
-    }
-    100% {
-      transform: translate3d(0, 0, 0) scale(1);
-    }
-  }
-
-  @keyframes blob-move-reverse {
-    0% {
-      transform: translate3d(0, 0, 0) scale(1.1);
-    }
-    50% {
-      transform: translate3d(-40px, 30px, 0) scale(0.95);
-    }
-    100% {
-      transform: translate3d(0, 0, 0) scale(1.1);
-    }
-  }
-
-  /* === Orbiting / drifting dots === */
-  @keyframes orbit-slow {
-    0% {
-      transform: rotate(0deg) translateX(12px) rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg) translateX(12px) rotate(-360deg);
-    }
-  }
-
-  /* === Utility classes using animations === */
-
-  .animate-line-slide {
-    animation: line-slide 18s linear infinite;
-  }
-
-  .animate-line-slide-slow {
-    animation: line-slide-slow 28s linear infinite;
-  }
-
-  .animate-pulse-slow {
-    animation: pulse-slow 14s ease-in-out infinite;
-  }
-
   .animate-ping-once {
     animation: ping-once 2s ease-out infinite;
   }
 
-  .animate-marquee {
-    animation: marquee 35s linear infinite;
+  /* === Global slow-moving gradient background === */
+  @keyframes bg-pan-slow {
+    0% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(60px, -40px, 0) scale(1.1);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
   }
 
-  .animate-float-y-slow {
-    animation: float-y 10s ease-in-out infinite;
+  .bg-animated-gradient {
+    background-image:
+      radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.40), transparent 60%),
+      radial-gradient(circle at 100% 0%, rgba(251, 191, 36, 0.30), transparent 60%),
+      radial-gradient(circle at 50% 100%, rgba(52, 211, 153, 0.28), transparent 60%);
+    animation: bg-pan-slow 40s ease-in-out infinite;
   }
 
-  .animate-twinkle-slow {
-    animation: twinkle 6s ease-in-out infinite;
-  }
-
-  .animate-blob-slow {
-    animation: blob-move 32s ease-in-out infinite;
-  }
-
-  .animate-blob-slower {
-    animation: blob-move-reverse 40s ease-in-out infinite;
-  }
-
-  .animate-orbit-slow {
-    animation: orbit-slow 18s linear infinite;
+  /* === Soft blueprint / grid overlay for real-estate feel === */
+  .bg-grid-soft {
+    background-image:
+      linear-gradient(
+        to right,
+        rgba(148, 163, 184, 0.10) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(148, 163, 184, 0.06) 1px,
+        transparent 1px
+      );
+    background-size: 80px 80px;
   }
 }
