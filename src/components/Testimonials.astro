@@ -1,0 +1,66 @@
+---
+const testimonials = [
+  {
+    name: "Rahul M.",
+    role: "Senior Product Manager, Manyata Tech Park",
+    quote:
+      "Brick.com helped me shortlist only 2 projects instead of 12 – both matched my commute, budget and future plans. The clarity saved months.",
+  },
+  {
+    name: "Shruti & Karthik",
+    role: "First-time Homebuyers",
+    quote:
+      "We didn’t feel sold to. Every project had ground reality – pros, cons and long-term view. That honesty is rare in real estate.",
+  },
+  {
+    name: "Vikram S.",
+    role: "NRI Investor",
+    quote:
+      "I rely on Brick.com as my on-ground research partner. Their reports helped me understand rental yields and micro-market stories in minutes.",
+  },
+  {
+    name: "Anita P.",
+    role: "Marketing Professional",
+    quote:
+      "The combination of brochures, maps and curated notes made it easy to bring my family onboard with the decision.",
+  },
+  {
+    name: "Aditya G.",
+    role: "Tech Consultant",
+    quote:
+      "They don’t push inventory. They filter. That’s the biggest reason I trust their recommendations.",
+  },
+];
+---
+
+<section class="bg-gradient-to-b from-slate-950/90 to-slate-950/40 border-y border-white/5">
+  <div class="mx-auto max-w-6xl px-4 py-10 lg:py-14">
+    <h2 class="text-xl sm:text-2xl font-semibold mb-2">What our clients say</h2>
+    <p class="text-sm text-slate-400 mb-6 max-w-xl">
+      Early buyers, investors and families who’ve used Brick.com as their real estate filter.
+    </p>
+
+    <div class="relative overflow-hidden">
+      <div class="flex gap-4 animate-marquee hover:[animation-play-state:paused]">
+        {testimonials.concat(testimonials).map((t, idx) => (
+          <figure
+            class="min-w-[260px] max-w-xs rounded-2xl border border-white/10 bg-slate-900/80 p-4 shadow-lg shadow-black/50"
+          >
+            <blockquote class="text-xs text-slate-200 leading-relaxed">
+              “{t.quote}”
+            </blockquote>
+            <figcaption class="mt-3 flex items-center gap-3">
+              <div class="h-8 w-8 rounded-full bg-gradient-to-br from-cyan-400 to-amber-300 flex items-center justify-center text-[11px] font-semibold text-slate-900">
+                {t.name[0]}
+              </div>
+              <div class="text-[11px]">
+                <p class="font-medium text-slate-100">{t.name}</p>
+                <p class="text-slate-400">{t.role}</p>
+              </div>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
