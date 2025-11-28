@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
-  /* === Hero background vertical lines === */
+  /* === Vertical moving lines (can be reused anywhere) === */
   @keyframes line-slide {
     0% {
       transform: translateY(0);
@@ -22,7 +22,7 @@
     }
   }
 
-  /* === Soft pulsing background glow === */
+  /* === Soft pulsing glow === */
   @keyframes pulse-slow {
     0%,
     100% {
@@ -33,7 +33,7 @@
     }
   }
 
-  /* === Small ping effect on “live” dot === */
+  /* === Small ping for "live" indicators === */
   @keyframes ping-once {
     0% {
       transform: scale(0.8);
@@ -46,7 +46,7 @@
     }
   }
 
-  /* === Horizontal marquee for testimonials === */
+  /* === Horizontal marquee (testimonials slider) === */
   @keyframes marquee {
     0% {
       transform: translateX(0);
@@ -56,7 +56,7 @@
     }
   }
 
-  /* === Floating blocks (skyline / buildings) === */
+  /* === Floating blocks (buildings / skyline feel) === */
   @keyframes float-y {
     0%,
     100% {
@@ -67,7 +67,7 @@
     }
   }
 
-  /* === Twinkling lights / sparkles === */
+  /* === Twinkling lights / sparks === */
   @keyframes twinkle {
     0%,
     100% {
@@ -80,7 +80,42 @@
     }
   }
 
-  /* === Utility classes using the above animations === */
+  /* === Big gradient blobs for background motion === */
+  @keyframes blob-move {
+    0% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(40px, -40px, 0) scale(1.15);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+
+  @keyframes blob-move-reverse {
+    0% {
+      transform: translate3d(0, 0, 0) scale(1.1);
+    }
+    50% {
+      transform: translate3d(-40px, 30px, 0) scale(0.95);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) scale(1.1);
+    }
+  }
+
+  /* === Orbiting / drifting dots === */
+  @keyframes orbit-slow {
+    0% {
+      transform: rotate(0deg) translateX(12px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(12px) rotate(-360deg);
+    }
+  }
+
+  /* === Utility classes using animations === */
 
   .animate-line-slide {
     animation: line-slide 18s linear infinite;
@@ -108,5 +143,17 @@
 
   .animate-twinkle-slow {
     animation: twinkle 6s ease-in-out infinite;
+  }
+
+  .animate-blob-slow {
+    animation: blob-move 32s ease-in-out infinite;
+  }
+
+  .animate-blob-slower {
+    animation: blob-move-reverse 40s ease-in-out infinite;
+  }
+
+  .animate-orbit-slow {
+    animation: orbit-slow 18s linear infinite;
   }
 }
