@@ -31,32 +31,28 @@
     animation: ping-once 2s ease-out infinite;
   }
 
-  /* === Global cinematic gradient movement === */
-/*
-  Big blurred gradients that move slowly to create
-  a "breathing" premium background behind the whole site.
-*/
+  /* === Global cinematic gradient movement (STRONGER + FASTER) === */
   @keyframes city-move {
     0% {
-      transform: translate3d(-60px, -40px, 0) scale(1);
+      transform: translate3d(-80px, -60px, 0) scale(1);
     }
     50% {
-      transform: translate3d(40px, -20px, 0) scale(1.1);
+      transform: translate3d(60px, -10px, 0) scale(1.12);
     }
     100% {
-      transform: translate3d(10px, 40px, 0) scale(1.05);
+      transform: translate3d(20px, 60px, 0) scale(1.05);
     }
   }
 
   .bg-animated-city {
     background-image:
-      radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.55), transparent 60%),
-      radial-gradient(circle at 100% 0%, rgba(251, 191, 36, 0.45), transparent 60%),
-      radial-gradient(circle at 10% 100%, rgba(52, 211, 153, 0.40), transparent 60%),
-      radial-gradient(circle at 90% 100%, rgba(129, 140, 248, 0.30), transparent 60%);
-    filter: blur(42px);
-    opacity: 0.9;
-    animation: city-move 42s ease-in-out infinite alternate;
+      radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.70), transparent 60%),
+      radial-gradient(circle at 100% 0%, rgba(251, 191, 36, 0.55), transparent 60%),
+      radial-gradient(circle at 10% 100%, rgba(52, 211, 153, 0.50), transparent 60%),
+      radial-gradient(circle at 90% 100%, rgba(129, 140, 248, 0.42), transparent 60%);
+    filter: blur(32px);
+    opacity: 1;
+    animation: city-move 22s ease-in-out infinite alternate;
   }
 
   /* === Soft blueprint / grid overlay for real-estate feel === */
@@ -64,14 +60,14 @@
     background-image:
       linear-gradient(
         to right,
-        rgba(148, 163, 184, 0.14) 1px,
+        rgba(148, 163, 184, 0.20) 1px,
         transparent 1px
       ),
       linear-gradient(
         to bottom,
-        rgba(148, 163, 184, 0.08) 1px,
+        rgba(148, 163, 184, 0.10) 1px,
         transparent 1px
       );
-    background-size: 90px 90px;
+    background-size: 80px 80px;
   }
 }
