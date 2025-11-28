@@ -1,0 +1,244 @@
+---
+const slides = [
+  {
+    id: "florique",
+    title: "Poulomi Florique – Life in Full Bloom",
+    tag: "North Bangalore • Thanisandra Main Road",
+    badge: "3 BHK • 80% Open Spaces • 40+ Amenities",
+    description:
+      "Premium 3 BHK residences inspired by Bangalore’s Garden City – with Bloomscapes® landscaping, IGBC-oriented design and strong investment potential.",
+    ctaPrimary: { label: "View Project Details", href: "/properties/poulomi-florique" },
+    ctaSecondary: { label: "Download Brochure", href: "/assets/poulomi-florique-brochure.pdf" },
+  },
+  {
+    id: "coming-1",
+    title: "Upcoming Launch – North Bangalore High-Street Living",
+    tag: "Pre-launch • Limited Inventories",
+    badge: "Curated by Brick.com",
+    description:
+      "A future-ready mixed-use community with retail, residences and a strong rental story near major IT corridors.",
+    ctaPrimary: { label: "Join Early Access List", href: "/contact?project=north-bangalore-launch" },
+    ctaSecondary: { label: "Talk to Our Team", href: "/contact" },
+  },
+  {
+    id: "coming-2",
+    title: "Sustainable Homes for a Changing Climate",
+    tag: "IGBC / LEED aligned communities",
+    badge: "Climate-conscious Portfolio",
+    description:
+      "Explore projects that prioritise ventilation, light, water conservation and long-term liveability—not just glossy brochures.",
+    ctaPrimary: { label: "See Climate-Ready Projects", href: "/properties" },
+    ctaSecondary: { label: "Why Sustainability Matters", href: "/blog/climate-resilient-homes" },
+  },
+];
+---
+
+<section class="relative overflow-hidden border-b border-white/5">
+  <!-- Animated background -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute -inset-32 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.18),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(251,191,36,0.14),_transparent_55%)] animate-pulse-slow"></div>
+    <div class="absolute inset-0 opacity-30 mix-blend-screen">
+      <!-- subtle moving construction lines -->
+      <div class="absolute -left-40 top-0 h-[160%] w-[1px] bg-gradient-to-b from-cyan-500/0 via-cyan-400/70 to-cyan-500/0 animate-line-slide"></div>
+      <div class="absolute left-1/3 -top-10 h-[160%] w-[1px] bg-gradient-to-b from-emerald-500/0 via-emerald-400/60 to-emerald-500/0 animate-line-slide-slow"></div>
+      <div class="absolute right-10 top-0 h-[160%] w-[1px] bg-gradient-to-b from-amber-400/0 via-amber-300/70 to-amber-400/0 animate-line-slide"></div>
+    </div>
+  </div>
+
+  <div class="relative mx-auto max-w-6xl px-4 py-10 lg:py-16 grid lg:grid-cols-[1.1fr,1fr] gap-10 items-center">
+    <!-- Left: Text content -->
+    <div class="space-y-5">
+      <span class="inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-slate-900/80 px-3 py-1 text-[11px] uppercase tracking-[0.15em] text-cyan-200">
+        <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping-once"></span>
+        Curated, Verified & Region-Focused
+      </span>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
+        Find real estate that <span class="text-cyan-300">actually</span> matches your
+        <span class="text-amber-300">life & investments</span>.
+      </h1>
+      <p class="text-sm sm:text-base text-slate-300 max-w-xl">
+        Brick.com is your channel partner for handpicked projects – starting with
+        North Bangalore’s most promising communities and steadily expanding across India.
+      </p>
+
+      <div class="mt-6 grid gap-4 text-xs sm:text-sm text-slate-300">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-slate-900/80 border border-cyan-300/40 text-[11px]">1</span>
+          <span>Shortlist only verified, fundamentals-strong projects.</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-slate-900/80 border border-amber-300/40 text-[11px]">2</span>
+          <span>Get honest, ground-level view of location potential.</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-slate-900/80 border border-emerald-300/40 text-[11px]">3</span>
+          <span>Take decisions faster with curated reports & visuals.</span>
+        </div>
+      </div>
+
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a
+          href="#properties"
+          class="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-5 py-2 text-xs sm:text-sm font-medium text-slate-900 shadow-lg shadow-cyan-400/40 hover:bg-cyan-300 transition-colors"
+        >
+          Browse Featured Properties
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-2 rounded-full border border-slate-500/70 bg-slate-900/70 px-5 py-2 text-xs sm:text-sm text-slate-100 hover:border-cyan-300/70 hover:text-cyan-100 transition-colors"
+        >
+          Talk to a Property Advisor
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: 3D-ish Slider -->
+    <div class="relative h-[360px] sm:h-[420px]">
+      <div class="absolute inset-0 rounded-[26px] bg-slate-900/70 border border-white/10 backdrop-blur-2xl shadow-[0_0_60px_rgba(15,23,42,0.9)] overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.18),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(245,158,11,0.18),_transparent_55%)] opacity-70"></div>
+
+        <div class="relative h-full px-4 py-4 flex flex-col">
+          <div class="flex items-center justify-between text-[11px] text-slate-300/90 mb-2">
+            <span class="uppercase tracking-[0.22em] text-slate-400">Live Projects Canvas</span>
+            <span id="hero-active-label" class="rounded-full bg-slate-950/40 px-2 py-1 border border-slate-500/50">
+              01 • Poulomi Florique
+            </span>
+          </div>
+
+          <!-- Stack -->
+          <div class="relative flex-1 mt-1">
+            {slides.map((slide, index) => (
+              <article
+                data-hero-slide
+                data-hero-id={slide.id}
+                class={`absolute inset-x-2 sm:inset-x-4 top-3 sm:top-6 rounded-3xl border border-white/10 bg-slate-900/90 shadow-xl transform transition-all duration-700 ease-out
+                  ${index === 0 ? "opacity-100 translate-y-0 scale-100 z-30" : "opacity-0 translate-y-6 scale-95 z-10"}
+                `}
+              >
+                <div class="grid grid-cols-[1.2fr,1fr] gap-3 sm:gap-4 p-3 sm:p-4">
+                  <!-- Text -->
+                  <div class="space-y-2">
+                    <p class="text-[11px] uppercase tracking-[0.18em] text-cyan-300/90">{slide.tag}</p>
+                    <h2 class="text-sm sm:text-lg font-semibold leading-snug">{slide.title}</h2>
+                    <p class="text-[11px] sm:text-xs text-slate-300/90 line-clamp-3">
+                      {slide.description}
+                    </p>
+                    <div class="inline-flex items-center gap-1 rounded-full bg-slate-800/90 border border-slate-600/80 px-3 py-1 text-[10px] text-amber-200 mt-1">
+                      <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                      <span>{slide.badge}</span>
+                    </div>
+                  </div>
+
+                  <!-- Image placeholder -->
+                  <div class="relative rounded-2xl bg-gradient-to-br from-slate-700 via-slate-900 to-slate-950 overflow-hidden flex items-end justify-end">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.35),_transparent_60%)]"></div>
+                    <div class="absolute bottom-1 left-2 text-[9px] text-slate-200/80">
+                      <p class="uppercase tracking-[0.18em]">Brick Visual</p>
+                      <p class="text-[9px] text-slate-400">Representative render / brochure image</p>
+                    </div>
+                    <div class="relative h-[110px] sm:h-[140px] w-full">
+                      <!-- Replace with actual <img> later -->
+                      <div class="absolute inset-4 rounded-xl border border-white/15 bg-gradient-to-t from-slate-900 via-slate-800 to-slate-700/90 flex items-center justify-center text-[10px] text-slate-200/80">
+                        Hero image of {slide.title}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between px-4 pb-3 pt-1 border-t border-white/5 text-[11px] text-slate-300/90">
+                  <div class="flex gap-2">
+                    <a href={slide.ctaPrimary.href} class="hover:text-cyan-300 underline-offset-2 hover:underline">
+                      {slide.ctaPrimary.label}
+                    </a>
+                    <span class="text-slate-600">•</span>
+                    <a href={slide.ctaSecondary.href} class="hover:text-amber-300 underline-offset-2 hover:underline">
+                      {slide.ctaSecondary.label}
+                    </a>
+                  </div>
+                  <span class="text-[10px] text-slate-500">Swipe / tap dots to switch</span>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <!-- Dots / Progress -->
+          <div class="mt-2 flex items-center justify-between">
+            <div class="flex gap-2">
+              {slides.map((slide, index) => (
+                <button
+                  type="button"
+                  data-hero-dot
+                  class={`h-1.5 rounded-full transition-all ${
+                    index === 0 ? "w-6 bg-cyan-400" : "w-3 bg-slate-500/70"
+                  }`}
+                  aria-label={`Show slide ${index + 1}: ${slide.title}`}
+                />
+              ))}
+            </div>
+            <div class="relative w-24 h-1 rounded-full bg-slate-700 overflow-hidden">
+              <div id="hero-progress" class="absolute inset-y-0 left-0 w-0 bg-gradient-to-r from-cyan-400 to-amber-300"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    const slides = Array.from(document.querySelectorAll("[data-hero-slide]"));
+    const dots = Array.from(document.querySelectorAll("[data-hero-dot]"));
+    const label = document.querySelector("#hero-active-label");
+    const progress = document.querySelector("#hero-progress");
+
+    if (slides.length && dots.length && label && progress) {
+      let index = 0;
+      const titles = slides.map((slide, i) => {
+        const heading = slide.querySelector("h2")?.textContent || `Slide ${i + 1}`;
+        return heading;
+      });
+
+      const setSlide = (i) => {
+        slides.forEach((slide, idx) => {
+          slide.classList.toggle("opacity-100", idx === i);
+          slide.classList.toggle("translate-y-0", idx === i);
+          slide.classList.toggle("scale-100", idx === i);
+          slide.classList.toggle("opacity-0", idx !== i);
+          slide.classList.toggle("translate-y-6", idx !== i);
+          slide.classList.toggle("scale-95", idx !== i);
+        });
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle("w-6", idx === i);
+          dot.classList.toggle("bg-cyan-400", idx === i);
+          dot.classList.toggle("w-3", idx !== i);
+          dot.classList.toggle("bg-slate-500", idx !== i);
+        });
+        label.textContent = `${String(i + 1).padStart(2, "0")} • ${titles[i]}`;
+        progress.style.transition = "none";
+        progress.style.width = "0%";
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            progress.style.transition = "width 7s linear";
+            progress.style.width = "100%";
+          });
+        });
+        index = i;
+      };
+
+      let timer = setInterval(() => {
+        setSlide((index + 1) % slides.length);
+      }, 7000);
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+          clearInterval(timer);
+          setSlide(i);
+          timer = setInterval(() => {
+            setSlide((index + 1) % slides.length);
+          }, 7000);
+        });
+      });
+
+      setSlide(0);
+    }
+  </script>
+</section>
