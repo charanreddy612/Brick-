@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";  // 👈 add this line
+
 export interface Props {
   title?: string;
   description?: string;
@@ -9,7 +11,6 @@ const {
   description = "Discover verified residential projects with strong fundamentals, future-ready amenities, and trustworthy developers – handpicked for serious buyers and investors.",
 } = Astro.props;
 ---
-
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
