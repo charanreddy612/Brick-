@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import HeroShowcase from "../components/HeroShowcase.astro";
+import PropertiesGrid from "../components/PropertiesGrid.astro";
+import Testimonials from "../components/Testimonials.astro";
+import BlogPreview from "../components/BlogPreview.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+
+const pageTitle = "Brick.com – Curated, Verified Real Estate Starting with North Bangalore";
+const pageDescription =
+  "Discover handpicked residential projects like Poulomi Florique on Thanisandra Main Road, North Bangalore – curated with honest insights, brochures and location stories.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <Header />
+  <main>
+    <HeroShowcase />
+    <PropertiesGrid />
+    <Testimonials />
+    <BlogPreview />
+  </main>
+  <SiteFooter />
+</BaseLayout>
