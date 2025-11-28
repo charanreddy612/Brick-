@@ -1,0 +1,75 @@
+---
+const properties = [
+  {
+    name: "Poulomi Florique",
+    location: "Thanisandra Main Road, North Bangalore",
+    tag: "Premium 3 BHK • Bloomscapes®",
+    href: "/properties/poulomi-florique",
+  },
+  {
+    name: "Prestige City Nova",
+    location: "Sarjapur Road, Bangalore",
+    tag: "Coming Soon • Curated",
+    href: "/properties/prestige-city-nova",
+  },
+  {
+    name: "Sobha Valley View",
+    location: "Kanakapura Road, Bangalore",
+    tag: "Coming Soon • Nature-Led",
+    href: "/properties/sobha-valley-view",
+  },
+  {
+    name: "Lodha Stellar Heights",
+    location: "Mumbai (Sample)",
+    tag: "Coming Soon • Metro City",
+    href: "/properties/lodha-stellar-heights",
+  },
+  {
+    name: "Future Launches",
+    location: "Multiple Cities",
+    tag: "Register Your Interest",
+    href: "/properties",
+  },
+];
+---
+
+<section id="properties" class="mx-auto max-w-6xl px-4 py-10 lg:py-14 space-y-6">
+  <div class="flex items-end justify-between gap-4">
+    <div>
+      <h2 class="text-xl sm:text-2xl font-semibold">Our Featured Properties</h2>
+      <p class="text-sm text-slate-400 max-w-xl">
+        A starting portfolio of strong, fundamentals-first projects – with real brochures, 
+        location stories and future appreciation potential.
+      </p>
+    </div>
+    <a href="/properties" class="hidden sm:inline text-xs text-cyan-300 hover:text-cyan-200 underline-offset-4 hover:underline">
+      View all properties →
+    </a>
+  </div>
+
+  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    {properties.map((p) => (
+      <a
+        href={p.href}
+        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60 hover:border-cyan-400/50 transition-colors shadow-lg shadow-black/60"
+      >
+        <div class="relative h-40 bg-gradient-to-br from-slate-700 via-slate-900 to-black">
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.25),_transparent_60%)]"></div>
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-[radial-gradient(circle_at_bottom,_rgba(245,158,11,0.3),_transparent_60%)]"></div>
+          <div class="absolute bottom-2 left-3 right-3 text-[11px] text-slate-200/90">
+            <p class="uppercase tracking-[0.16em] text-slate-300">Brick Visual</p>
+            <p class="text-[10px] text-slate-400">Project hero image / elevation render</p>
+          </div>
+        </div>
+        <div class="p-4 space-y-1.5">
+          <h3 class="text-sm sm:text-base font-semibold group-hover:text-cyan-300">{p.name}</h3>
+          <p class="text-xs text-slate-400">{p.location}</p>
+          <p class="text-[11px] text-amber-200/90">{p.tag}</p>
+          <p class="text-[11px] text-cyan-300/90 mt-1 flex items-center gap-1">
+            View details <span aria-hidden="true">↗</span>
+          </p>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
