@@ -1,0 +1,566 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+
+const pageTitle =
+  "Poulomi Florique – Honest Review, Location Story & Buyer Fit in North Bangalore";
+const pageDescription =
+  "A detailed, experience-style review of Poulomi Florique in North Bangalore – covering location, design philosophy, amenities, pros & cons, buyer fit, and real-world decision guidance.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main class="pt-6 pb-16 lg:pb-20">
+    {/* Breadcrumb */}
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 mt-4 mb-6 text-xs text-slate-400">
+      <a href="/" class="hover:text-cyan-300">Home</a>
+      <span class="mx-1.5 text-slate-600">/</span>
+      <a href="/blog" class="hover:text-cyan-300">Blog</a>
+      <span class="mx-1.5 text-slate-600">/</span>
+      <span class="text-slate-300">Poulomi Florique Review</span>
+    </div>
+
+    {/* Top CTA strip */}
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 mb-4">
+      <a
+        href="/properties/poulomi-florique"
+        class="block w-full rounded-2xl bg-cyan-400/10 border border-cyan-400/60 px-4 py-3 text-xs sm:text-sm font-medium text-cyan-100 text-center hover:bg-cyan-400/20 transition"
+      >
+        👉 Prefer a visual walk-through instead? View the full Poulomi Florique project page here →
+      </a>
+    </div>
+
+    {/* Title + intro CTA */}
+    <section class="mx-auto max-w-7xl px-6 lg:px-10 space-y-4">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white max-w-4xl leading-tight">
+        Poulomi Florique – Detailed, Grounded Review for Serious Buyers in North Bangalore
+      </h1>
+
+      <p class="text-sm sm:text-base text-slate-300 max-w-3xl">
+        If you’re considering North Bangalore and have come across Poulomi Florique, this review is for you. Not as a
+        sales pitch, but as a calm, structured walk-through of what this project really offers, where it fits in the
+        Thanisandra – Bhartiya City belt, and who it may genuinely suit.
+      </p>
+
+      <div class="flex flex-wrap gap-3">
+        <a
+          href="/properties/poulomi-florique"
+          class="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-6 py-2 text-sm font-semibold text-slate-900 shadow-lg shadow-cyan-400/40 hover:bg-cyan-300 transition"
+        >
+          View Project Overview
+        </a>
+        <a
+          href="/contact?project=poulomi-florique"
+          class="inline-flex items-center gap-2 rounded-full border border-slate-500 bg-slate-900/70 px-6 py-2 text-sm font-medium text-slate-100 hover:border-cyan-300 hover:text-cyan-100 transition"
+        >
+          Request a Call Back about Florique
+        </a>
+      </div>
+    </section>
+
+    {/* ARTICLE BODY */}
+    <article class="mx-auto max-w-7xl px-6 lg:px-10 mt-10 text-slate-200 leading-relaxed space-y-8">
+
+      {/* STORY INTRO */}
+      <section class="space-y-4">
+        <p>
+          On a cloudy Saturday morning, three families walked into the Poulomi Florique site office for the first time.
+          All of them had one thing in common – they were tired.
+        </p>
+        <p>
+          Tired of seeing cramped living rooms marketed as “spacious 3 BHKs”. Tired of dusty approach roads leading to
+          projects advertised as “prime location”. Tired of boiler-room sales calls pushing them to “book in the next
+          one hour”.
+        </p>
+        <p>
+          For many serious buyers in North Bangalore, the search isn’t just about <em>finding a flat</em>. It’s about
+          finding a home that balances:
+        </p>
+        <ul class="list-disc list-inside">
+          <li>reasonable access to tech corridors,</li>
+          <li>a calm, livable community, and</li>
+          <li>a developer who takes design and detailing seriously.</li>
+        </ul>
+        <p>
+          Poulomi Florique positions itself right at this intersection – a 9-acre, nature-forward, Bloomscapes®-themed
+          community off Thanisandra Main Road, near Bhartiya City. This review is an attempt to see if it truly lives
+          up to that positioning.
+        </p>
+      </section>
+
+      {/* WHAT IS FLORIQUE */}
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold text-white">
+          What Exactly Is Poulomi Florique?
+        </h2>
+        <p>
+          At its core, Florique is a mid-to-upper-premium apartment community focused primarily on 3 BHK homes, with a
+          few 2.5 BHK options. The project combines:
+        </p>
+        <ul class="list-disc list-inside">
+          <li>A sizeable land parcel with generous open spaces,</li>
+          <li>A strong landscape and Bloomscapes® theme, and</li>
+          <li>A clubhouse + amenity mix aimed at families who plan to live in the project full-time.</li>
+        </ul>
+        <p>
+          Instead of chasing extreme density, the design leans more towards breathing spaces, courts, gardens and
+          visual openness between towers. That alone sets it apart from several hyper-packed projects in fast-growing
+          corridors.
+        </p>
+        <p>
+          If you haven’t seen the visual overview yet, it’s worth visiting the dedicated project page:
+          <a href="/properties/poulomi-florique" class="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">
+            Poulomi Florique Project Page
+          </a>.
+        </p>
+      </section>
+
+      {/* LOCATION SECTION */}
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold text-white">
+          Location & Micro-Market: Thanisandra – Bhartiya City Belt
+        </h2>
+        <p>
+          Florique sits in the North Bangalore belt, in proximity to Thanisandra Main Road and the Bhartiya City
+          ecosystem. This is important to understand: you are not buying in an isolated pocket; you are plugging into a
+          larger urban story that already has IT parks, schools, malls and social infrastructure.
+        </p>
+        <p>
+          For many potential buyers, the big questions are:
+        </p>
+        <ul class="list-disc list-inside">
+          <li>How practical will my daily office commute be?</li>
+          <li>What will my children’s school runs look like?</li>
+          <li>Will this feel liveable after the “new project excitement” fades?</li>
+        </ul>
+        <p>
+          That is where this belt has an advantage over more speculative, far-out locations. When compared to very
+          early-stage airport-side layouts, this corridor is already live, with a mix of:
+        </p>
+        <ul class="list-disc list-inside">
+          <li>IT and business ecosystems,</li>
+          <li>Retail and daily convenience options,</li>
+          <li>Institutional and educational presence, and</li>
+          <li>Relatively shorter commute bands to Manyata and other hubs (subject to traffic).</li>
+        </ul>
+        <p>
+          It’s still North Bangalore, so you’re not “central city” close. But for many buyers working in northern or
+          north-eastern tech belts, the trade-off is acceptable.
+        </p>
+      </section>
+
+      {/* DESIGN & LIFESTYLE */}
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold text-white">
+          Design Language & Everyday Lifestyle
+        </h2>
+        <p>
+          Where Florique tries to differentiate itself is in its landscape and planning language. The Bloomscapes® idea
+          is not just a marketing tagline – it’s a commitment to floral, green and theme-based outdoor spaces that
+          shape how residents experience the campus daily.
+        </p>
+        <p>
+          Broadly, the project leans on:
+        </p>
+        <ul class="list-disc list-inside">
+          <li>Themed gardens (butterfly, fragrant, herb, reflexology style areas),</li>
+          <li>Vehicle-free podium experiences,</li>
+          <li>Multiple courts and sports facilities,</li>
+          <li>A significant clubhouse volume, and</li>
+          <li>Carefully positioned leisure lawns, pools and community courts.</li>
+        </ul>
+        <p>
+          For families who really use common areas – kids playing outdoors, adults walking in the evenings, seniors
+          needing calm sit-out zones – this kind of planning matters more than a long amenity list on a brochure.
+        </p>
+      </section>
+
+      {/* PROS & CONS */}
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold text-white">
+          Key Strengths & Potential Watch-outs (Honest View)
+        </h2>
+
+        <div class="grid gap-5 md:grid-cols-2 text-sm sm:text-base">
+          <div class="rounded-2xl border border-emerald-400/50 bg-emerald-500/5 p-4 space-y-2">
+            <h3 class="font-semibold text-emerald-200">Where Poulomi Florique Stands Strong</h3>
+            <ul class="list-disc list-inside space-y-1.5">
+              <li>Thoughtful focus on open spaces and landscape rather than just tower count.</li>
+              <li>Primarily 3 BHK-oriented community, which often improves end-user profile and stability.</li>
+              <li>Location that balances relative calm with access to employment and township ecosystems.</li>
+              <li>Clubhouse and amenity design aimed at actual usage, not just brochure checklist.</li>
+              <li>
+                Suitable for families who value liveability and green pockets more than just short-term price speculation.
+              </li>
+            </ul>
+          </div>
+
+          <div class="rounded-2xl border border-amber-400/50 bg-amber-500/5 p-4 space-y-2">
+            <h3 class="font-semibold text-amber-200">Points to Evaluate Carefully</h3>
+            <ul class="list-disc list-inside space-y-1.5">
+              <li>
+                Understand exact approach roads and future traffic patterns – not just today’s drive on a weekend.
+              </li>
+              <li>
+                Compare all-inclusive pricing with 2–3 other serious options in the belt to ensure fair value.
+              </li>
+              <li>
+                Check tower placement, floor-to-floor distances and sunlight penetration for your specific unit stack.
+              </li>
+              <li>
+                As with any large project, check RERA details, phasing and realistic possession timelines.
+              </li>
+              <li>
+                Understand maintenance expectations – a richer landscape and amenity mix requires proper upkeep.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="text-xs text-slate-400">
+          No project is perfect for everyone. The goal is to understand whether Florique’s strengths match your family’s
+          priorities – and whether its trade-offs are ones you can comfortably live with.
+        </p>
+      </section>
+
+      {/* WHO IT SUITS */}
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold text-white">
+          Who Is Poulomi Florique Likely to Suit?
+        </h2>
+
+        <div class="grid gap-5 md:grid-cols-2 text-sm sm:text-base">
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">Florique May Be a Good Fit If You:</h3>
+            <ul class="list-disc list-inside space-y-1.5">
+              <li>Work in or around Manyata Tech Park, Bhartiya City or northern belts.</li>
+              <li>Are looking for a long-term home, not a quick exit within 2–3 years.</li>
+              <li>Prefer 3 BHK-dominant communities with a certain profile of neighbours.</li>
+              <li>Value greenery, open spaces and curated amenities for children and seniors.</li>
+              <li>See your home as a mix of lifestyle + sensible investment, not a pure bet.</li>
+            </ul>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">Florique May Not Be Ideal If You:</h3>
+            <ul class="list-disc list-inside space-y-1.5">
+              <li>Want to be extremely close to CBD or traditional central neighbourhoods.</li>
+              <li>Are purely chasing the lowest ticket price above everything else.</li>
+              <li>Expect ultra-short commutes to deep South-East IT corridors.</li>
+              <li>Are looking only for short-term flips or speculative pre-launch exits.</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>
+          If you are somewhere in the first column more than the second, Florique is worth putting on your shortlist and
+          comparing seriously with 2–3 other projects in similar bands.
+        </p>
+
+        <p>
+          You can explore more structured project details here:
+          <a
+            href="/properties/poulomi-florique"
+            class="ml-1 text-cyan-300 hover:text-cyan-200 underline underline-offset-4"
+          >
+            Poulomi Florique Project Overview →
+          </a>
+        </p>
+      </section>
+
+      {/* MINI TESTIMONIAL STYLE INSIGHTS */}
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold text-white">
+          Common Buyer Reactions After Visiting Florique
+        </h2>
+        <p class="text-sm sm:text-base">
+          Based on repeated patterns in on-ground conversations, these are some typical impressions buyers share after a
+          site visit (summarised, not quoted verbatim):
+        </p>
+
+        <div class="grid gap-4 md:grid-cols-3 text-sm sm:text-base">
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <p class="text-[11px] uppercase tracking-[0.2em] text-cyan-200">Family with Young Kids</p>
+            <p>
+              “We liked that the project doesn’t feel claustrophobic. The idea of kids playing in central lawns and
+              themed gardens is more important to us than just tower count.”
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <p class="text-[11px] uppercase tracking-[0.2em] text-emerald-200">End-User IT Couple</p>
+            <p>
+              “We had seen many boxy 3 BHKs in other projects. Layouts here, along with the amenity spread, made us feel
+              like it’s a place we can grow in for 8–10 years, not just use temporarily.”
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <p class="text-[11px] uppercase tracking-[0.2em] text-amber-200">Investor with a 10-Year View</p>
+            <p>
+              “What I liked is that this doesn’t look like a pure speculative play. It feels like a project families
+              will want to live in, which usually supports both rentals and long-term value.”
+            </p>
+          </div>
+        </div>
+
+        <p class="text-xs text-slate-400">
+          These are indicative experience patterns, not formal testimonials. Always do your own site visit and checks
+          before deciding.
+        </p>
+      </section>
+
+      {/* FAQ SECTION */}
+      <section class="space-y-6">
+        <h2 class="text-2xl font-semibold text-white">
+          15 Frequently Asked Questions About Poulomi Florique (From a Buyer’s Lens)
+        </h2>
+
+        <div class="space-y-4 text-sm sm:text-base">
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">
+              1. Is Poulomi Florique mainly for end-users or investors?
+            </h3>
+            <p>
+              It is positioned more as an end-user-friendly, lifestyle community with strong open spaces, a large
+              clubhouse and a 3 BHK-led profile. Investors may still consider it, but the core design language and
+              amenity focus clearly lean towards families who plan to live there.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">
+              2. How does the location compare to other parts of North Bangalore?
+            </h3>
+            <p>
+              The Thanisandra – Bhartiya belt offers a balance of township ecosystem, access to tech corridors and
+              partial separation from heavy traffic chaos of certain junctions. It isn’t “central city” close, but for
+              many northern/IT professionals, it strikes a workable middle ground between commute and liveability.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">
+              3. What kind of buyer profile is Florique likely to attract?
+            </h3>
+            <p>
+              Expect a mix of mid to senior professionals, IT/tech families, some NRIs and end-users upgrading from
+              smaller 2/2.5 BHKs into more generous 3 BHK homes. The open space emphasis and amenity mix usually appeal
+              to people who treat this as a long-term home rather than a stopover.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">
+              4. Is this a right choice if I work at Manyata Tech Park?
+            </h3>
+            <p>
+              It can be, provided you are comfortable with the commute band during peak hours. Many buyers working at
+              Manyata explore this belt precisely because it offers a different lifestyle than living right next to the
+              tech park, while still staying within a reasonable drive radius in most scenarios.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">
+              5. How should I compare Florique with other projects in North Bangalore?
+            </h3>
+            <p>
+              Shortlist 2–3 serious alternatives within similar ticket ranges and ask: Which one gives me the best mix
+              of liveability, trust in developer, clarity of plans, unit layout comfort and realistic timelines? Avoid
+              comparisons based only on brochure amenity counts or rate per sq ft.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">
+              6. Does the Bloomscapes® concept actually matter beyond aesthetics?
+            </h3>
+            <p>
+              It matters if you value daily experience. The focus on floral and theme-based landscapes, along with
+              vehicle-free podium spaces, usually improves how children, seniors and adults use the campus. If you see
+              your family spending real time outdoors, it becomes more than just an aesthetic choice.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">
+              7. Should I worry about long-term maintenance of such a landscape-rich project?
+            </h3>
+            <p>
+              Any project with richer landscape, water bodies and amenity density requires disciplined maintenance. It’s
+              important to understand estimated maintenance charges, association planning and how the developer typically
+              manages communities post-handover in other projects, if available for reference.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">
+              8. Is Florique a good option if I want to upgrade from a 2 BHK to a 3 BHK?
+            </h3>
+            <p>
+              It can be, especially if you are currently in a congested layout or older building with limited amenities.
+              Florique’s positioning works well for families moving into a more future-ready community with better open
+              spaces and amenity planning, provided the pricing aligns with your financial comfort zone.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">
+              9. What should I look for specifically when choosing a unit here?
+            </h3>
+            <p>
+              Focus on tower orientation, floor level, stack position (corner vs internal), balcony views, privacy from
+              neighbouring towers, noise exposure, and distance to lifts and common areas. A well-chosen stack can
+              dramatically improve how the apartment feels, even within the same project.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">
+              10. Will this project suit elderly parents living with us?
+            </h3>
+            <p>
+              The presence of walking paths, sit-outs, calmer landscaped zones and a largely podium-style layout can be
+              a plus for seniors. But it’s still important to evaluate lift reliability, emergency medical access,
+              proximity to hospitals and tower-level accessibility for them specifically.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">
+              11. How should I think about appreciation and rental potential?
+            </h3>
+            <p>
+              Florique sits in a belt that already has demand drivers from IT, township ecosystems and airport-side
+              growth. Well-chosen units in liveable communities often see more stable long-term traction in both rentals
+              and resale. That said, appreciation is never guaranteed – it depends on overall market cycles, entry price
+              and holding period.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">
+              12. Is this the right project if I want to move in within a very short time frame?
+            </h3>
+            <p>
+              Timelines depend on the specific phase, construction progress and regulatory milestones. Always verify
+              possession estimates directly through official documentation and on-ground status, rather than relying
+              only on verbal estimates or generic dates.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">
+              13. How does this compare with smaller, standalone projects in the area?
+            </h3>
+            <p>
+              Standalone projects may offer lower density or a quieter feel, but often lack the scale of amenities and
+              landscape that a larger community like Florique offers. If you prioritise comprehensive on-campus
+              facilities, Florique may stand out; if you value hyper-low density above all else, you may want to compare
+              with smaller alternatives.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">
+              14. What kind of holding horizon should I expect if I buy here?
+            </h3>
+            <p>
+              A horizon of 7–10 years is often more realistic for extracting both lifestyle value and meaningful
+              long-term gains from such communities. If you are unsure about staying committed for at least that long,
+              it’s better to reconsider your timing or expectations.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-2">
+            <h3 class="font-semibold text-slate-50">
+              15. How can Brick.com help me if I am seriously evaluating Poulomi Florique?
+            </h3>
+            <p>
+              Brick.com can help you by understanding your budget, family needs and work locations; explaining how
+              Florique compares with other options in the belt; and arranging structured conversations or visits without
+              sales pressure. The aim is not to push you into Florique, but to help you decide if it truly fits your
+              life and horizon.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CLOSING + CTA */}
+      <section class="space-y-4">
+        <h2 class="text-2xl font-semibold text-white">
+          Final Take: Should Poulomi Florique Be on Your Shortlist?
+        </h2>
+
+        <p class="text-sm sm:text-base">
+          If you are looking for a long-term home in North Bangalore with strong emphasis on open spaces, curated
+          amenities and a largely 3 BHK-driven profile, Poulomi Florique deserves a serious, honest look. It is not a
+          magic answer to every buyer’s situation, but for the right profile, it sits in a very relevant sweet spot
+          between lifestyle and long-term sense.
+        </p>
+
+        <p class="text-sm sm:text-base">
+          The best next step is not to believe or reject this review blindly – it’s to visit, walk the site, test your
+          commute, ask hard questions and compare it with 2–3 other genuine contenders. That is where platforms like
+          Brick.com come in: to help you make that comparison without confusion or pressure.
+        </p>
+
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a
+            href="/properties/poulomi-florique"
+            class="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-6 py-2.5 text-sm font-semibold text-slate-900 shadow-lg shadow-cyan-400/40 hover:bg-cyan-300 transition"
+          >
+            Explore Poulomi Florique Details
+          </a>
+          <a
+            href="/contact?project=poulomi-florique"
+            class="inline-flex items-center gap-2 rounded-full border border-slate-500 bg-slate-900/70 px-6 py-2.5 text-sm font-medium text-slate-100 hover:border-cyan-300 hover:text-cyan-100 transition"
+          >
+            Talk to Brick.com About This Project
+          </a>
+          <a
+            href="https://wa.me/917989041017?text=Hi%2C%20I%20am%20evaluating%20Poulomi%20Florique%20and%20need%20an%20honest%20opinion."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-full border border-green-400 bg-green-500/10 px-6 py-2.5 text-sm font-medium text-green-300 hover:bg-green-500/20 transition"
+          >
+            💬 Chat on WhatsApp
+          </a>
+        </div>
+      </section>
+    </article>
+
+    {/* Sticky project CTA button */}
+    <a
+      href="/properties/poulomi-florique"
+      class="fixed bottom-4 right-4 z-40 rounded-full bg-cyan-400 px-4 sm:px-6 py-2.5 text-[11px] sm:text-sm font-semibold text-slate-900 shadow-lg shadow-cyan-400/40 hover:bg-cyan-300 transition"
+    >
+      View Poulomi Florique Project →
+    </a>
+
+    {/* Article Schema */}
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: pageTitle,
+        description: pageDescription,
+        author: {
+          "@type": "Organization",
+          name: "Brick.com"
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Brick.com"
+        },
+        mainEntityOfPage:
+          "https://brick-inky-peach.vercel.app/blog/poulomi-florique-review-north-bangalore"
+      })}
+    </script>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>
