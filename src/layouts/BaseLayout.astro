@@ -21,28 +21,24 @@ const {
     <link rel="icon" href="/favicon.ico" />
   </head>
 
-  <body class="text-slate-100 antialiased">
-    <!-- FULLSCREEN BACKGROUND VIDEO -->
+  <body class="bg-slate-950 text-slate-100 antialiased">
+    <!-- GLOBAL animated background (no video, but feels alive) -->
     <div class="fixed inset-0 -z-10 overflow-hidden">
-      <video
-        id="brick-bg-video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="auto"
-        class="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/bg-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <!-- Solid base -->
+      <div class="absolute inset-0 bg-slate-950"></div>
 
-      <!-- Very light overlay so we can clearly see if video is running -->
-      <div class="absolute inset-0 bg-black/15"></div>
+      <!-- Moving gradient glow (gives life & motion) -->
+      <div class="absolute -inset-24 city-glow-layer opacity-80"></div>
+
+      <!-- Stylised city / building strip at bottom -->
+      <div class="absolute bottom-0 inset-x-0 h-[32vh] city-silhouette-layer opacity-55"></div>
+
+      <!-- Soft grid overlay for tech / blueprint feel -->
+      <div class="absolute inset-0 bg-grid-soft opacity-[0.2] mix-blend-soft-light pointer-events-none"></div>
     </div>
 
-    <!-- PAGE CONTENT -->
-    <div class="relative min-h-screen flex flex-col overflow-x-hidden bg-transparent">
+    <!-- Page content -->
+    <div class="relative min-h-screen flex flex-col overflow-x-hidden">
       <slot />
     </div>
 
@@ -56,17 +52,5 @@ const {
     >
       W
     </a>
-
-    <!-- Small script to force playback on some strict browsers -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const v = document.getElementById("brick-bg-video");
-        if (v && v.paused) {
-          v.play().catch(() => {
-            // ignore autoplay errors silently
-          });
-        }
-      });
-    </script>
   </body>
 </html>
