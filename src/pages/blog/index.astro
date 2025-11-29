@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+
+const pageTitle = "Real Estate Insights & Market Stories – Brick.com Blog";
+const pageDescription =
+  "Read expert insights, market trends, investment clarity and region-focused real estate breakdowns from Bangalore, Hyderabad and upcoming global regions.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main class="pt-6 pb-16 lg:pb-20">
+    {/* Breadcrumb */}
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 mt-4 mb-6 text-xs text-slate-400">
+      <a href="/" class="hover:text-cyan-300">Home</a>
+      <span class="mx-1.5 text-slate-600">/</span>
+      <span class="text-slate-300">Blog</span>
+    </div>
+
+    {/* Title */}
+    <section class="mx-auto max-w-7xl px-6 lg:px-10 space-y-4">
+      <h1 class="text-3xl sm:text-4xl font-semibold text-white">
+        Real Estate Insights, Market Truths & Decision Support
+      </h1>
+      <p class="text-sm sm:text-base text-slate-300 max-w-3xl">
+        Stories, research-backed articles and practical guidance to help you make confident,
+        transparent real estate decisions — without sales pressure or confusing jargon.
+      </p>
+    </section>
+
+    {/* Blog list preview placeholder - auto updates when posts added */}
+    <section class="mx-auto max-w-7xl px-6 lg:px-10 mt-10 space-y-6">
+      <h2 class="text-lg sm:text-xl font-semibold text-white">Latest Articles</h2>
+
+      <div class="grid gap-6 lg:grid-cols-3">
+        <a
+          href="/blog/north-bangalore-real-estate-2025"
+          class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 hover:border-cyan-300/60 transition"
+        >
+          <h3 class="text-lg font-semibold text-white mb-2">
+            Is North Bangalore Still the Best Real Estate Bet for 2025 & Beyond?
+          </h3>
+          <p class="text-sm text-slate-300">
+            Growth signals, infrastructure impact, appreciation trends and micro-market realities no one talks about.
+          </p>
+        </a>
+
+        <a
+          href="/blog/how-to-evaluate-a-project"
+          class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 hover:border-amber-300/60 transition"
+        >
+          <h3 class="text-lg font-semibold text-white mb-2">
+            10 Checks to Evaluate a Real Estate Project Without Falling for Marketing Traps
+          </h3>
+          <p class="text-sm text-slate-300">
+            A practical framework to analyze builders, plans, pricing and location fundamentals the right way.
+          </p>
+        </a>
+
+        <a
+          href="/blog/poulomi-florique-review-north-bangalore"
+          class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 hover:border-emerald-300/60 transition"
+        >
+          <h3 class="text-lg font-semibold text-white mb-2">
+            Poulomi Florique – Detailed Review, Strengths & Why Buyers Are Considering It
+          </h3>
+          <p class="text-sm text-slate-300">
+            Real-world analysis of the project, location, buyer fit, lifestyle and long-term potential.
+          </p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>
