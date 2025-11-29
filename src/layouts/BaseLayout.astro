@@ -21,33 +21,32 @@ const {
     <link rel="icon" href="/favicon.ico" />
   </head>
 
-  <body class="bg-slate-950 text-slate-100 antialiased">
-    <!-- GLOBAL cinematic video background (for the whole site) -->
+  <body class="text-slate-100 antialiased">
+    <!-- FULLSCREEN BACKGROUND VIDEO (TEST VERSION – VERY VISIBLE) -->
     <div class="fixed inset-0 -z-10 overflow-hidden">
-      <!-- Background video -->
       <video
         autoplay
         muted
         loop
         playsinline
-        class="absolute inset-0 w-auto min-w-full min-h-full max-w-none object-cover opacity-70"
+        preload="auto"
+        class="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/assets/bg-video.mp4" type="video/mp4" />
+        <!-- Fallback text -->
+        Your browser does not support the video tag.
       </video>
 
-      <!-- Dark overlay for readability -->
-      <div class="absolute inset-0 bg-slate-950/65 backdrop-blur-[1px]"></div>
-
-      <!-- Optional subtle grid overlay to keep the tech vibe -->
-      <div class="absolute inset-0 bg-grid-soft opacity-[0.2] mix-blend-soft-light pointer-events-none"></div>
+      <!-- Very light overlay just to keep text readable -->
+      <div class="absolute inset-0 bg-black/25"></div>
     </div>
 
-    <!-- Actual page content -->
-    <div class="relative min-h-screen flex flex-col overflow-x-hidden">
+    <!-- PAGE CONTENT -->
+    <div class="relative min-h-screen flex flex-col overflow-x-hidden bg-transparent">
       <slot />
     </div>
 
-    <!-- Floating WhatsApp Button (Global) -->
+    <!-- Global WhatsApp Button -->
     <a
       href="https://wa.me/917989041017?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20real%20estate%20projects"
       target="_blank"
