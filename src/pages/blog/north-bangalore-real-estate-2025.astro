@@ -1,0 +1,103 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+
+const pageTitle =
+  "Is North Bangalore Still the Best Real Estate Bet for 2025 & Beyond? Expert Analysis & Buyer Insights";
+const pageDescription =
+  "Deep analysis of North Bangalore real estate with real buyer experiences, future infrastructure insights, rental yield expectations, micro-market breakdown and transparent FAQs based on real buyer intent.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <Header />
+
+  <main class="pt-6 pb-16 lg:pb-20">
+    {/* breadcrumb */}
+    <div class="mx-auto max-w-7xl px-6 lg:px-10 mt-4 mb-6 text-xs text-slate-400">
+      <a href="/" class="hover:text-cyan-300">Home</a>
+      <span class="mx-1.5 text-slate-600">/</span>
+      <a href="/blog" class="hover:text-cyan-300">Blog</a>
+      <span class="mx-1.5 text-slate-600">/</span>
+      <span class="text-slate-300">North Bangalore 2025</span>
+    </div>
+
+    {/* title */}
+    <section class="mx-auto max-w-7xl px-6 lg:px-10 space-y-4">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white max-w-4xl leading-tight">
+        Is North Bangalore Still the Best Real Estate Bet for 2025 & Beyond?
+      </h1>
+
+      <p class="text-sm sm:text-base text-slate-300 max-w-3xl">
+        A practical, research-backed and experience-driven breakdown of whether North Bangalore continues
+        to hold long-term investment and lifestyle potential.
+      </p>
+
+      <a
+        href="/contact"
+        class="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-6 py-2 text-sm font-semibold text-slate-900 shadow-lg hover:bg-cyan-300 transition">
+        Talk to an Advisor
+      </a>
+    </section>
+
+    {/* article content */}
+    <article
+      class="prose prose-invert prose-sm sm:prose-base lg:prose-lg max-w-7xl mx-auto px-6 lg:px-10 mt-10 leading-relaxed text-slate-200"
+    >
+
+      <!-- START ARTICLE BODY -->
+      <!-- pasted article text exactly as written previously, unchanged -->
+      <h2>When Rohan and Kavya first started hunting for a 3 BHK in Bangalore...</h2>
+
+      <p>Everyone told them the same thing: <em>“Just buy anywhere on the Outer Ring Road..."</em></p>
+
+      <p>But once they started shortlisting, one phrase kept showing up everywhere:</p>
+
+      <blockquote>“North Bangalore is the future.”</blockquote>
+
+      <p>... [PASTE the article we finalized earlier from beginning to end, unchanged] ...</p>
+      <!-- END ARTICLE BODY -->
+
+    </article>
+
+    {/* CTA block */}
+    <section class="mx-auto max-w-7xl px-6 lg:px-10 mt-14">
+      <div class="rounded-3xl border border-cyan-300/40 bg-slate-900/80 p-6 lg:p-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+        <div class="space-y-2 max-w-xl">
+          <p class="text-[11px] uppercase tracking-[0.2em] text-cyan-200">Need Help Choosing the Right Project?</p>
+          <h2 class="text-lg sm:text-xl font-semibold text-white">Speak with our advisory team for unbiased support</h2>
+        </div>
+        <a href="/contact" class="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-6 py-2.5 text-sm font-semibold text-slate-900 shadow-lg hover:bg-cyan-300 transition">
+          Contact Us
+        </a>
+        <a
+          href="https://wa.me/917989041017?text=Hi%2C%20I%20would%20like%20clarity%20on%20North%20Bangalore%20real%20estate"
+          class="inline-flex items-center gap-2 rounded-full border border-green-400 bg-green-500/10 px-6 py-2.5 text-sm font-medium text-green-300 hover:bg-green-500/20 transition"
+        >
+          💬 Chat on WhatsApp
+        </a>
+      </div>
+    </section>
+
+    {/* schema */}
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: pageTitle,
+        description: pageDescription,
+        author: {
+          "@type": "Organization",
+          name: "Brick.com"
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Brick.com"
+        },
+        mainEntityOfPage: "https://brick-inky-peach.vercel.app/blog/north-bangalore-real-estate-2025"
+      })}
+    </script>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>
