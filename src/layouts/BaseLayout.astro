@@ -22,16 +22,24 @@ const {
   </head>
 
   <body class="bg-slate-950 text-slate-100 antialiased">
-    <!-- GLOBAL cinematic animated background (for the whole site) -->
+    <!-- GLOBAL cinematic video background (for the whole site) -->
     <div class="fixed inset-0 -z-10 overflow-hidden">
-      <!-- Solid base -->
-      <div class="absolute inset-0 bg-slate-950"></div>
+      <!-- Background video -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-auto min-w-full min-h-full max-w-none object-cover opacity-70"
+      >
+        <source src="/assets/bg-video.mp4" type="video/mp4" />
+      </video>
 
-      <!-- Moving gradient fog (very visible) -->
-      <div class="absolute -inset-32 bg-animated-city"></div>
+      <!-- Dark overlay for readability -->
+      <div class="absolute inset-0 bg-slate-950/65 backdrop-blur-[1px]"></div>
 
-      <!-- Soft blueprint grid overlay -->
-      <div class="absolute inset-0 bg-grid-soft opacity-[0.22] mix-blend-soft-light"></div>
+      <!-- Optional subtle grid overlay to keep the tech vibe -->
+      <div class="absolute inset-0 bg-grid-soft opacity-[0.2] mix-blend-soft-light pointer-events-none"></div>
     </div>
 
     <!-- Actual page content -->
@@ -44,4 +52,10 @@ const {
       href="https://wa.me/917989041017?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20real%20estate%20projects"
       target="_blank"
       rel="noopener noreferrer"
-      class="fixed bottom-6 right-6 z-50 flex items-center justify-center rounded-full bg-green-500 shadow-[0_0_25px_rgba(16,185,129,0.8)] hover:scale-110 transition_]()
+      aria-label="Chat with Brick.com on WhatsApp"
+      class="fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-green-500 text-white text-2xl font-bold shadow-[0_0_25px_rgba(34,197,94,0.9)] hover:bg-green-400 hover:scale-110 transition transform"
+    >
+      W
+    </a>
+  </body>
+</html>
