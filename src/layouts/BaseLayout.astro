@@ -22,9 +22,10 @@ const {
   </head>
 
   <body class="text-slate-100 antialiased">
-    <!-- FULLSCREEN BACKGROUND VIDEO (TEST VERSION – VERY VISIBLE) -->
+    <!-- FULLSCREEN BACKGROUND VIDEO -->
     <div class="fixed inset-0 -z-10 overflow-hidden">
       <video
+        id="brick-bg-video"
         autoplay
         muted
         loop
@@ -32,13 +33,12 @@ const {
         preload="auto"
         class="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/assets/bg-video.mp4" type="video/mp4" />
-        <!-- Fallback text -->
+        <source src="/bg-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <!-- Very light overlay just to keep text readable -->
-      <div class="absolute inset-0 bg-black/25"></div>
+      <!-- Very light overlay so we can clearly see if video is running -->
+      <div class="absolute inset-0 bg-black/15"></div>
     </div>
 
     <!-- PAGE CONTENT -->
@@ -56,5 +56,17 @@ const {
     >
       W
     </a>
+
+    <!-- Small script to force playback on some strict browsers -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const v = document.getElementById("brick-bg-video");
+        if (v && v.paused) {
+          v.play().catch(() => {
+            // ignore autoplay errors silently
+          });
+        }
+      });
+    </script>
   </body>
 </html>
