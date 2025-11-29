@@ -1,0 +1,195 @@
+---
+/**
+ * Projects Page – Cinematic + Luxury
+ * Adjust the layout import path/name if your layout file is different.
+ */
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const projects = [
+  {
+    id: 1,
+    title: "The Living Garden",
+    category: "Bridal Couture",
+    year: "2025",
+    location: "Kolkata, India",
+    tag: "Featured",
+    shortDescription:
+      "A cinematic bridal story inspired by blooming florals, soft golds, and handcrafted 3D embroidery.",
+    mood: "Romantic · Timeless · Floral",
+    thumbnail:
+      "/images/projects/living-garden.jpg", // replace with your real image
+  },
+  {
+    id: 2,
+    title: "Moonlit Whisper",
+    category: "Cocktail & Sangeet",
+    year: "2025",
+    location: "Mumbai, India",
+    tag: "Editorial",
+    shortDescription:
+      "Shimmering silks and liquid sequins captured under soft moonlight for a modern cocktail narrative.",
+    mood: "Shimmer · Movement · Drama",
+    thumbnail:
+      "/images/projects/moonlit-whisper.jpg",
+  },
+  {
+    id: 3,
+    title: "Forever Begins",
+    category: "Bridal Ceremony",
+    year: "2024",
+    location: "Hyderabad, India",
+    tag: "Real Bride",
+    shortDescription:
+      "Classic red and antique gold couture designed around the bride’s love story and family traditions.",
+    mood: "Heritage · Emotional · Grand",
+    thumbnail:
+      "/images/projects/forever-begins.jpg",
+  },
+  {
+    id: 4,
+    title: "Bloom Beyond Tradition",
+    category: "Indo-Western",
+    year: "2024",
+    location: "Bangalore, India",
+    tag: "Fusion",
+    shortDescription:
+      "Structured silhouettes with floral sculpting and modern cuts for destination celebrations.",
+    mood: "Bold · Global · Artistic",
+    thumbnail:
+      "/images/projects/bloom-beyond.jpg",
+  },
+];
+---
+
+<BaseLayout title="Projects | Poulomi Florique">
+  <main class="projects-page">
+    {/* Hero Section */}
+    <section class="projects-hero">
+      <div class="projects-hero-overlay"></div>
+
+      <div class="projects-hero-inner">
+        <p class="projects-eyebrow">Signature Couture Journeys</p>
+        <h1 class="projects-title">
+          Our <span>Cinematic Projects</span>
+        </h1>
+        <p class="projects-subtitle">
+          A visual anthology of bridal stories, couture films, and editorial
+          narratives — captured frame by frame, stitch by stitch.
+        </p>
+
+        <div class="projects-hero-meta">
+          <div class="projects-meta-item">
+            <span class="projects-meta-label">Projects</span>
+            <span class="projects-meta-value">{projects.length}+</span>
+          </div>
+          <div class="projects-meta-item">
+            <span class="projects-meta-label">Moodboard</span>
+            <span class="projects-meta-value">
+              Romantic · Cinematic · Couture
+            </span>
+          </div>
+          <div class="projects-meta-item">
+            <span class="projects-meta-label">Scope</span>
+            <span class="projects-meta-value">
+              Bridal · Campaigns · Editorials
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Filter Bar (visual only for now) */}
+    <section class="projects-filter">
+      <p class="projects-filter-label">Browse by Mood</p>
+      <div class="projects-filter-chips">
+        <button class="projects-chip projects-chip-active" type="button">
+          All Stories
+        </button>
+        <button class="projects-chip" type="button">Bridal Couture</button>
+        <button class="projects-chip" type="button">Cocktail & Sangeet</button>
+        <button class="projects-chip" type="button">Indo-Western</button>
+        <button class="projects-chip" type="button">Real Brides</button>
+      </div>
+    </section>
+
+    {/* Projects Grid */}
+    <section class="projects-grid-section">
+      <div class="projects-grid-header">
+        <h2>Couture stories in motion</h2>
+        <p>
+          Each project is a chapter in our cinematic universe — blending artisan
+          craftsmanship, emotional storytelling, and fashion-forward silhouettes.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        {projects.map((project) => (
+          <article class="project-card">
+            <div class="project-card-media">
+              <div class="project-card-gradient"></div>
+              <img
+                src={project.thumbnail}
+                alt={project.title}
+                loading="lazy"
+              />
+              <span class="project-tag">{project.tag}</span>
+            </div>
+
+            <div class="project-card-content">
+              <div class="project-card-header">
+                <h3>{project.title}</h3>
+                <p class="project-category">{project.category}</p>
+              </div>
+
+              <p class="project-description">{project.shortDescription}</p>
+
+              <div class="project-meta-row">
+                <div class="project-meta">
+                  <span class="project-meta-label">Year</span>
+                  <span class="project-meta-value">{project.year}</span>
+                </div>
+                <div class="project-meta">
+                  <span class="project-meta-label">Location</span>
+                  <span class="project-meta-value">{project.location}</span>
+                </div>
+              </div>
+
+              <p class="project-mood">{project.mood}</p>
+
+              <div class="project-card-footer">
+                <a href="#" class="project-link">
+                  View Project Story
+                  <span class="project-link-orbit"></span>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    {/* Cinematic Callout */}
+    <section class="projects-callout">
+      <div class="projects-callout-inner">
+        <p class="projects-callout-eyebrow">Your Story. Our Canvas.</p>
+        <h2>
+          Let&apos;s craft a couture story <span>around you.</span>
+        </h2>
+        <p>
+          Whether it&apos;s your bridal day, a cocktail evening, or an
+          editorial film — we design pieces that feel like they were written
+          for your script alone.
+        </p>
+
+        <div class="projects-callout-actions">
+          <a href="/contact" class="projects-primary-btn">
+            Book a Private Consultation
+          </a>
+          <a href="/blogs" class="projects-secondary-btn">
+            Explore Styling Stories
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
